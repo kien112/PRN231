@@ -1,0 +1,3 @@
+***REMOVED***<Project>
+  <Import Project="..\build\ScoreManagementApi.props" />
+</Project>
