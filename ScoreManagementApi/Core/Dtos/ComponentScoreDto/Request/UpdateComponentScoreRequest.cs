@@ -1,0 +1,27 @@
+***REMOVED***using ScoreManagementApi.Core.Dtos.Common;
+
+namespace ScoreManagementApi.Core.Dtos.ComponentScoreDto.Request
+***REMOVED***
+    public class UpdateComponentScoreRequest : CreateComponentScoreRequest
+    ***REMOVED***
+        public int? Id ***REMOVED*** get; set; ***REMOVED***
+        public bool? Active ***REMOVED*** get; set; ***REMOVED***
+
+        public new List<ErrorMessage> ValidateInput()
+        ***REMOVED***
+            var errors = base.ValidateInput();
+
+            if (Id == null)
+                errors.Add(new ErrorMessage
+                ***REMOVED***
+                    Key = "Id",
+                    Message = "Id of Component Score is required!"
+        ***REMOVED***);
+
+            if (Active == null)
+                Active = false;
+
+            return errors;
+***REMOVED***
+***REMOVED***
+***REMOVED***
