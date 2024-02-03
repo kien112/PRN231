@@ -1,19 +1,19 @@
-***REMOVED***using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ScoreManagementApi.Core.Entities
-***REMOVED***
+{
     public class Score
-    ***REMOVED***
-        public int Id ***REMOVED*** get; set; ***REMOVED***
+    {
+        public int Id { get; set; }
 
         [ForeignKey("Student")]
-        public string StudentId ***REMOVED*** get; set; ***REMOVED***
-        public User Student ***REMOVED*** get; set; ***REMOVED***
+        public string StudentId { get; set; }
+        public User Student { get; set; }
 
         [ForeignKey("ComponentScore")]
-        public int ComponentScoreId ***REMOVED*** get; set; ***REMOVED***
-        public ComponentScore ComponentScore ***REMOVED*** get; set; ***REMOVED***
+        public int ComponentScoreId { get; set; }
+        public ComponentScore ComponentScore { get; set; }
 
-        public float? Mark ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        public float? Mark { get; set; }
+    }
+}

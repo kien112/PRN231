@@ -1,17 +1,17 @@
-***REMOVED***using ScoreManagementApi.Core.Dtos.User;
+﻿using ScoreManagementApi.Core.Dtos.User;
 using ScoreManagementApi.Core.Dtos.SubjectDto;
 
 namespace ScoreManagementApi.Core.Dtos.ClassRoomDto.Response
-***REMOVED***
+{
     public class ClassResponse
-    ***REMOVED***
-        public int Id ***REMOVED*** get; set; ***REMOVED***
-        public string Name ***REMOVED*** get; set; ***REMOVED***
-        public bool Active ***REMOVED*** get; set; ***REMOVED***
-        public UserTiny? Teacher ***REMOVED*** get; set; ***REMOVED***
-        public UserTiny? Creator ***REMOVED*** get; set; ***REMOVED***
-        public DateTime CreatedAt ***REMOVED*** get; set; ***REMOVED***
-        public SubjectTiny Subject ***REMOVED*** get; set; ***REMOVED***
-        public List<ClassStudentResponse> ClassStudents ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public bool Active { get; set; }
+        public UserTiny? Teacher { get; set; }
+        public UserTiny? Creator { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public SubjectTiny Subject { get; set; }
+        public List<ClassStudentResponse> ClassStudents { get; set; }
+    }
+}

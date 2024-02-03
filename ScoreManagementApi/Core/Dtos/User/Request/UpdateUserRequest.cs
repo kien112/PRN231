@@ -1,8 +1,8 @@
-***REMOVED***namespace ScoreManagementApi.Core.Dtos.User.Request
-***REMOVED***
+﻿namespace ScoreManagementApi.Core.Dtos.User.Request
+{
     public class UpdateUserRequest : CreateUserRequest
-    ***REMOVED***
-        public string Id ***REMOVED*** get; set; ***REMOVED***
-        public bool Active ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+    {
+        public string Id { get; set; }
+        public bool Active { get; set; }
+    }
+}

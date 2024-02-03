@@ -1,12 +1,12 @@
-***REMOVED***using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace ScoreManagementApi.Core.Entities
-***REMOVED***
+{
     public class User : IdentityUser
-    ***REMOVED***
-        public string FullName ***REMOVED*** get; set; ***REMOVED***
-        public bool Active ***REMOVED*** get; set; ***REMOVED***
-        public bool Gender ***REMOVED*** get; set; ***REMOVED***
+    {
+        public string FullName { get; set; }
+        public bool Active { get; set; }
+        public bool Gender { get; set; }
 
-***REMOVED***
-***REMOVED***
+    }
+}

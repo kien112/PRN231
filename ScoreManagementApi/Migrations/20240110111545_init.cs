@@ -1,32 +1,32 @@
-***REMOVED***using System;
+﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace ScoreManagementApi.Migrations
-***REMOVED***
+{
     public partial class init : Migration
-    ***REMOVED***
+    {
         protected override void Up(MigrationBuilder migrationBuilder)
-        ***REMOVED***
+        {
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
-                ***REMOVED***
+                {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true)
-        ***REMOVED***,
+                },
                 constraints: table =>
-                ***REMOVED***
+                {
                     table.PrimaryKey("PK_AspNetRoles", x => x.Id);
-        ***REMOVED***);
+                });
 
             migrationBuilder.CreateTable(
                 name: "AspNetUsers",
                 columns: table => new
-                ***REMOVED***
+                {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Active = table.Column<bool>(type: "bit", nullable: false),
@@ -45,24 +45,24 @@ namespace ScoreManagementApi.Migrations
                     LockoutEnd = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
                     LockoutEnabled = table.Column<bool>(type: "bit", nullable: false),
                     AccessFailedCount = table.Column<int>(type: "int", nullable: false)
-        ***REMOVED***,
+                },
                 constraints: table =>
-                ***REMOVED***
+                {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
-        ***REMOVED***);
+                });
 
             migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
-                ***REMOVED***
+                {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     RoleId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
-        ***REMOVED***,
+                },
                 constraints: table =>
-                ***REMOVED***
+                {
                     table.PrimaryKey("PK_AspNetRoleClaims", x => x.Id);
                     table.ForeignKey(
                         name: "FK_AspNetRoleClaims_AspNetRoles_RoleId",
@@ -70,20 +70,20 @@ namespace ScoreManagementApi.Migrations
                         principalTable: "AspNetRoles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-        ***REMOVED***);
+                });
 
             migrationBuilder.CreateTable(
                 name: "AspNetUserClaims",
                 columns: table => new
-                ***REMOVED***
+                {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ClaimType = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ClaimValue = table.Column<string>(type: "nvarchar(max)", nullable: true)
-        ***REMOVED***,
+                },
                 constraints: table =>
-                ***REMOVED***
+                {
                     table.PrimaryKey("PK_AspNetUserClaims", x => x.Id);
                     table.ForeignKey(
                         name: "FK_AspNetUserClaims_AspNetUsers_UserId",
@@ -91,38 +91,38 @@ namespace ScoreManagementApi.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-        ***REMOVED***);
+                });
 
             migrationBuilder.CreateTable(
                 name: "AspNetUserLogins",
                 columns: table => new
-                ***REMOVED***
+                {
                     LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ProviderKey = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ProviderDisplayName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false)
-        ***REMOVED***,
+                },
                 constraints: table =>
-                ***REMOVED***
-                    table.PrimaryKey("PK_AspNetUserLogins", x => new ***REMOVED*** x.LoginProvider, x.ProviderKey ***REMOVED***);
+                {
+                    table.PrimaryKey("PK_AspNetUserLogins", x => new { x.LoginProvider, x.ProviderKey });
                     table.ForeignKey(
                         name: "FK_AspNetUserLogins_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-        ***REMOVED***);
+                });
 
             migrationBuilder.CreateTable(
                 name: "AspNetUserRoles",
                 columns: table => new
-                ***REMOVED***
+                {
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     RoleId = table.Column<string>(type: "nvarchar(450)", nullable: false)
-        ***REMOVED***,
+                },
                 constraints: table =>
-                ***REMOVED***
-                    table.PrimaryKey("PK_AspNetUserRoles", x => new ***REMOVED*** x.UserId, x.RoleId ***REMOVED***);
+                {
+                    table.PrimaryKey("PK_AspNetUserRoles", x => new { x.UserId, x.RoleId });
                     table.ForeignKey(
                         name: "FK_AspNetUserRoles_AspNetRoles_RoleId",
                         column: x => x.RoleId,
@@ -135,32 +135,32 @@ namespace ScoreManagementApi.Migrations
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-        ***REMOVED***);
+                });
 
             migrationBuilder.CreateTable(
                 name: "AspNetUserTokens",
                 columns: table => new
-                ***REMOVED***
+                {
                     UserId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     LoginProvider = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     Value = table.Column<string>(type: "nvarchar(max)", nullable: true)
-        ***REMOVED***,
+                },
                 constraints: table =>
-                ***REMOVED***
-                    table.PrimaryKey("PK_AspNetUserTokens", x => new ***REMOVED*** x.UserId, x.LoginProvider, x.Name ***REMOVED***);
+                {
+                    table.PrimaryKey("PK_AspNetUserTokens", x => new { x.UserId, x.LoginProvider, x.Name });
                     table.ForeignKey(
                         name: "FK_AspNetUserTokens_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-        ***REMOVED***);
+                });
 
             migrationBuilder.CreateTable(
                 name: "Subjects",
                 columns: table => new
-                ***REMOVED***
+                {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
@@ -168,21 +168,21 @@ namespace ScoreManagementApi.Migrations
                     Active = table.Column<bool>(type: "bit", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     CreatorId = table.Column<string>(type: "nvarchar(450)", nullable: true)
-        ***REMOVED***,
+                },
                 constraints: table =>
-                ***REMOVED***
+                {
                     table.PrimaryKey("PK_Subjects", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Subjects_AspNetUsers_CreatorId",
                         column: x => x.CreatorId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id");
-        ***REMOVED***);
+                });
 
             migrationBuilder.CreateTable(
                 name: "ClassRooms",
                 columns: table => new
-                ***REMOVED***
+                {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
@@ -191,9 +191,9 @@ namespace ScoreManagementApi.Migrations
                     CreatorId = table.Column<string>(type: "nvarchar(450)", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
                     SubjectId = table.Column<int>(type: "int", nullable: false)
-        ***REMOVED***,
+                },
                 constraints: table =>
-                ***REMOVED***
+                {
                     table.PrimaryKey("PK_ClassRooms", x => x.Id);
                     table.ForeignKey(
                         name: "FK_ClassRooms_AspNetUsers_CreatorId",
@@ -213,12 +213,12 @@ namespace ScoreManagementApi.Migrations
                         principalTable: "Subjects",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-        ***REMOVED***);
+                });
 
             migrationBuilder.CreateTable(
                 name: "ComponentScores",
                 columns: table => new
-                ***REMOVED***
+                {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
@@ -226,9 +226,9 @@ namespace ScoreManagementApi.Migrations
                     Active = table.Column<bool>(type: "bit", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(250)", maxLength: 250, nullable: true),
                     SubjectId = table.Column<int>(type: "int", nullable: false)
-        ***REMOVED***,
+                },
                 constraints: table =>
-                ***REMOVED***
+                {
                     table.PrimaryKey("PK_ComponentScores", x => x.Id);
                     table.ForeignKey(
                         name: "FK_ComponentScores_Subjects_SubjectId",
@@ -236,20 +236,20 @@ namespace ScoreManagementApi.Migrations
                         principalTable: "Subjects",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-        ***REMOVED***);
+                });
 
             migrationBuilder.CreateTable(
                 name: "ClassStudents",
                 columns: table => new
-                ***REMOVED***
+                {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ClassRoomId = table.Column<int>(type: "int", nullable: false),
                     StudentId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     JoinDate = table.Column<DateTime>(type: "datetime2", nullable: false)
-        ***REMOVED***,
+                },
                 constraints: table =>
-                ***REMOVED***
+                {
                     table.PrimaryKey("PK_ClassStudents", x => x.Id);
                     table.ForeignKey(
                         name: "FK_ClassStudents_AspNetUsers_StudentId",
@@ -263,20 +263,20 @@ namespace ScoreManagementApi.Migrations
                         principalTable: "ClassRooms",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-        ***REMOVED***);
+                });
 
             migrationBuilder.CreateTable(
                 name: "Scores",
                 columns: table => new
-                ***REMOVED***
+                {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     StudentId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     ComponentScoreId = table.Column<int>(type: "int", nullable: false),
                     Mark = table.Column<float>(type: "real", nullable: true)
-        ***REMOVED***,
+                },
                 constraints: table =>
-                ***REMOVED***
+                {
                     table.PrimaryKey("PK_Scores", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Scores_AspNetUsers_StudentId",
@@ -290,7 +290,7 @@ namespace ScoreManagementApi.Migrations
                         principalTable: "ComponentScores",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
-        ***REMOVED***);
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -375,10 +375,10 @@ namespace ScoreManagementApi.Migrations
                 name: "IX_Subjects_CreatorId",
                 table: "Subjects",
                 column: "CreatorId");
-***REMOVED***
+        }
 
         protected override void Down(MigrationBuilder migrationBuilder)
-        ***REMOVED***
+        {
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
@@ -414,6 +414,6 @@ namespace ScoreManagementApi.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

@@ -1,26 +1,26 @@
-***REMOVED***using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using ScoreManagementApi.Core.Entities;
 
 namespace ScoreManagementApi.Core.DbContext
-***REMOVED***
+{
     public class ApplicationDbContext : IdentityDbContext<User>
-    ***REMOVED***
+    {
 
-        public DbSet<Subject> Subjects ***REMOVED*** get; set; ***REMOVED***
-        public DbSet<ClassRoom> ClassRooms ***REMOVED*** get; set; ***REMOVED***
-        public DbSet<ComponentScore> ComponentScores ***REMOVED*** get; set; ***REMOVED***
-        public DbSet<Score> Scores ***REMOVED*** get; set; ***REMOVED***
-        public DbSet<ClassStudent> ClassStudents ***REMOVED*** get; set; ***REMOVED***
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<ClassRoom> ClassRooms { get; set; }
+        public DbSet<ComponentScore> ComponentScores { get; set; }
+        public DbSet<Score> Scores { get; set; }
+        public DbSet<ClassStudent> ClassStudents { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) 
             : base(options)
-        ***REMOVED*** 
+        { 
             
-***REMOVED***
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        ***REMOVED***
+        {
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<ClassRoom>()
@@ -34,7 +34,7 @@ namespace ScoreManagementApi.Core.DbContext
                 .WithMany()
                 .HasForeignKey(c => c.CreatorId)
                 .OnDelete(DeleteBehavior.Restrict);
-***REMOVED***
+        }
 
-***REMOVED***
-***REMOVED***
+    }
+}

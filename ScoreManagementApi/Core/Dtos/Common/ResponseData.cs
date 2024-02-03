@@ -1,16 +1,16 @@
-***REMOVED***namespace ScoreManagementApi.Core.Dtos.Common
-***REMOVED***
+﻿namespace ScoreManagementApi.Core.Dtos.Common
+{
     public class ResponseData<T>
-    ***REMOVED***
-        public T Data ***REMOVED*** get; set; ***REMOVED***
-        public string Message ***REMOVED*** get; set; ***REMOVED***
-        public int StatusCode ***REMOVED*** get; set; ***REMOVED***
-        public List<ErrorMessage> Erorrs ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
+    {
+        public T Data { get; set; }
+        public string Message { get; set; }
+        public int StatusCode { get; set; }
+        public List<ErrorMessage> Erorrs { get; set; }
+    }
 
     public class ErrorMessage
-    ***REMOVED***
-        public string Key ***REMOVED*** get; set; ***REMOVED***
-        public string Message ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+    {
+        public string Key { get; set; }
+        public string Message { get; set; }
+    }
+}

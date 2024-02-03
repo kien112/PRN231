@@ -1,13 +1,13 @@
-***REMOVED***
-  "runtimeTarget": ***REMOVED***
+{
+  "runtimeTarget": {
     "name": ".NETCoreApp,Version=v6.0",
     "signature": ""
-  ***REMOVED***,
-  "compilationOptions": ***REMOVED******REMOVED***,
-  "targets": ***REMOVED***
-    ".NETCoreApp,Version=v6.0": ***REMOVED***
-      "ScoreManagementApi/1.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ScoreManagementApi/1.0.0": {
+        "dependencies": {
           "EPPlus": "7.0.1",
           "MailKit": "4.2.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.10",
@@ -16,21 +16,21 @@
           "Microsoft.EntityFrameworkCore.Tools": "6.0.10",
           "NETCore.MailKit": "2.1.0",
           "Swashbuckle.AspNetCore": "6.2.3"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "ScoreManagementApi.dll": ***REMOVED******REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "BouncyCastle.Cryptography/2.2.1": ***REMOVED***
-        "runtime": ***REMOVED***
-          "lib/net6.0/BouncyCastle.Cryptography.dll": ***REMOVED***
+        },
+        "runtime": {
+          "ScoreManagementApi.dll": {}
+        }
+      },
+      "BouncyCastle.Cryptography/2.2.1": {
+        "runtime": {
+          "lib/net6.0/BouncyCastle.Cryptography.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.2.1.47552"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "EPPlus/7.0.1": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "EPPlus/7.0.1": {
+        "dependencies": {
           "EPPlus.Interfaces": "6.1.1",
           "EPPlus.System.Drawing": "6.1.1",
           "Microsoft.Extensions.Configuration.Json": "6.0.0",
@@ -38,98 +38,98 @@
           "System.ComponentModel.Annotations": "5.0.0",
           "System.Security.Cryptography.Pkcs": "7.0.2",
           "System.Text.Encoding.CodePages": "7.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/EPPlus.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/EPPlus.dll": {
             "assemblyVersion": "7.0.1.0",
             "fileVersion": "7.0.1.0"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "EPPlus.Interfaces/6.1.1": ***REMOVED***
-        "runtime": ***REMOVED***
-          "lib/net6.0/EPPlus.Interfaces.dll": ***REMOVED***
+          }
+        }
+      },
+      "EPPlus.Interfaces/6.1.1": {
+        "runtime": {
+          "lib/net6.0/EPPlus.Interfaces.dll": {
             "assemblyVersion": "6.1.1.0",
             "fileVersion": "6.1.1.0"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "EPPlus.System.Drawing/6.1.1": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "EPPlus.System.Drawing/6.1.1": {
+        "dependencies": {
           "EPPlus.Interfaces": "6.1.1",
           "System.Drawing.Common": "6.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/EPPlus.System.Drawing.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/EPPlus.System.Drawing.dll": {
             "assemblyVersion": "6.1.1.0",
             "fileVersion": "6.1.1.0"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Humanizer.Core/2.8.26": ***REMOVED***
-        "runtime": ***REMOVED***
-          "lib/netstandard2.0/Humanizer.dll": ***REMOVED***
+          }
+        }
+      },
+      "Humanizer.Core/2.8.26": {
+        "runtime": {
+          "lib/netstandard2.0/Humanizer.dll": {
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "MailKit/4.2.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "MailKit/4.2.0": {
+        "dependencies": {
           "MimeKit": "4.2.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/MailKit.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/MailKit.dll": {
             "assemblyVersion": "4.2.0.0",
             "fileVersion": "4.2.0.0"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.10": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.10": {
+        "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.10.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {
             "assemblyVersion": "6.0.10.0",
             "fileVersion": "6.0.1022.47617"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.AspNetCore.Cryptography.Internal/6.0.10": ***REMOVED***
-        "runtime": ***REMOVED***
-          "lib/net6.0/Microsoft.AspNetCore.Cryptography.Internal.dll": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Cryptography.Internal/6.0.10": {
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.1022.47617"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.10": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.10": {
+        "dependencies": {
           "Microsoft.AspNetCore.Cryptography.Internal": "6.0.10"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.1022.47617"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/6.0.10": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/6.0.10": {
+        "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "6.0.10",
           "Microsoft.Extensions.Identity.Stores": "6.0.10"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
             "assemblyVersion": "6.0.10.0",
             "fileVersion": "6.0.1022.47617"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.CSharp/4.5.0": ***REMOVED******REMOVED***,
-      "Microsoft.Data.SqlClient/2.1.4": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.CSharp/4.5.0": {},
+      "Microsoft.Data.SqlClient/2.1.4": {
+        "dependencies": {
           "Microsoft.Data.SqlClient.SNI.runtime": "2.1.1",
           "Microsoft.Identity.Client": "4.21.1",
           "Microsoft.IdentityModel.JsonWebTokens": "6.10.0",
@@ -140,54 +140,54 @@
           "System.Runtime.Caching": "4.7.0",
           "System.Security.Principal.Windows": "4.7.0",
           "System.Text.Encoding.CodePages": "7.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
             "assemblyVersion": "2.0.20168.4",
             "fileVersion": "2.0.20168.4"
-  ***REMOVED***
-***REMOVED***,
-        "runtimeTargets": ***REMOVED***
-          "runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": ***REMOVED***
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
             "rid": "unix",
             "assetType": "runtime",
             "assemblyVersion": "2.0.20168.4",
             "fileVersion": "2.0.20168.4"
-  ***REMOVED***,
-          "runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": ***REMOVED***
+          },
+          "runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll": {
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "2.0.20168.4",
             "fileVersion": "2.0.20168.4"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Data.SqlClient.SNI.runtime/2.1.1": ***REMOVED***
-        "runtimeTargets": ***REMOVED***
-          "runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.Data.SqlClient.SNI.runtime/2.1.1": {
+        "runtimeTargets": {
+          "runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-arm",
             "assetType": "native",
             "fileVersion": "2.1.1.0"
-  ***REMOVED***,
-          "runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll": ***REMOVED***
+          },
+          "runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-arm64",
             "assetType": "native",
             "fileVersion": "2.1.1.0"
-  ***REMOVED***,
-          "runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll": ***REMOVED***
+          },
+          "runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-x64",
             "assetType": "native",
             "fileVersion": "2.1.1.0"
-  ***REMOVED***,
-          "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll": ***REMOVED***
+          },
+          "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "2.1.1.0"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.EntityFrameworkCore/6.0.10": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore/6.0.10": {
+        "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "6.0.10",
           "Microsoft.EntityFrameworkCore.Analyzers": "6.0.10",
           "Microsoft.Extensions.Caching.Memory": "6.0.1",
@@ -195,1071 +195,1071 @@
           "Microsoft.Extensions.Logging": "6.0.0",
           "System.Collections.Immutable": "6.0.0",
           "System.Diagnostics.DiagnosticSource": "6.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/Microsoft.EntityFrameworkCore.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.dll": {
             "assemblyVersion": "6.0.10.0",
             "fileVersion": "6.0.1022.47607"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.EntityFrameworkCore.Abstractions/6.0.10": ***REMOVED***
-        "runtime": ***REMOVED***
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Abstractions/6.0.10": {
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
             "assemblyVersion": "6.0.10.0",
             "fileVersion": "6.0.1022.47607"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.EntityFrameworkCore.Analyzers/6.0.10": ***REMOVED******REMOVED***,
-      "Microsoft.EntityFrameworkCore.Design/6.0.10": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Analyzers/6.0.10": {},
+      "Microsoft.EntityFrameworkCore.Design/6.0.10": {
+        "dependencies": {
           "Humanizer.Core": "2.8.26",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.10"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {
             "assemblyVersion": "6.0.10.0",
             "fileVersion": "6.0.1022.47607"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.EntityFrameworkCore.Relational/6.0.10": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational/6.0.10": {
+        "dependencies": {
           "Microsoft.EntityFrameworkCore": "6.0.10",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {
             "assemblyVersion": "6.0.10.0",
             "fileVersion": "6.0.1022.47607"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.EntityFrameworkCore.SqlServer/6.0.10": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.SqlServer/6.0.10": {
+        "dependencies": {
           "Microsoft.Data.SqlClient": "2.1.4",
           "Microsoft.EntityFrameworkCore.Relational": "6.0.10"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {
             "assemblyVersion": "6.0.10.0",
             "fileVersion": "6.0.1022.47607"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.EntityFrameworkCore.Tools/6.0.10": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Tools/6.0.10": {
+        "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "6.0.10"
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.ApiDescription.Server/3.0.0": ***REMOVED******REMOVED***,
-      "Microsoft.Extensions.Caching.Abstractions/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "Microsoft.Extensions.ApiDescription.Server/3.0.0": {},
+      "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
+        "dependencies": {
           "Microsoft.Extensions.Primitives": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.Caching.Memory/6.0.1": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "Microsoft.Extensions.Caching.Memory/6.0.1": {
+        "dependencies": {
           "Microsoft.Extensions.Caching.Abstractions": "6.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
           "Microsoft.Extensions.Options": "6.0.0",
           "Microsoft.Extensions.Primitives": "6.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.222.6406"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.Configuration/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration/6.0.0": {
+        "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.Extensions.Primitives": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.Configuration.Abstractions/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
+        "dependencies": {
           "Microsoft.Extensions.Primitives": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.Configuration.FileExtensions/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "Microsoft.Extensions.Configuration.FileExtensions/6.0.0": {
+        "dependencies": {
           "Microsoft.Extensions.Configuration": "6.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.Extensions.FileProviders.Abstractions": "6.0.0",
           "Microsoft.Extensions.FileProviders.Physical": "6.0.0",
           "Microsoft.Extensions.Primitives": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.Configuration.Json/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "Microsoft.Extensions.Configuration.Json/6.0.0": {
+        "dependencies": {
           "Microsoft.Extensions.Configuration": "6.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "6.0.0",
           "Microsoft.Extensions.FileProviders.Abstractions": "6.0.0",
           "System.Text.Json": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.DependencyInjection/6.0.1": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/6.0.1": {
+        "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.DependencyInjection.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.1022.47605"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": ***REMOVED******REMOVED***,
-      "Microsoft.Extensions.FileProviders.Abstractions/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {},
+      "Microsoft.Extensions.FileProviders.Abstractions/6.0.0": {
+        "dependencies": {
           "Microsoft.Extensions.Primitives": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.FileProviders.Physical/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "Microsoft.Extensions.FileProviders.Physical/6.0.0": {
+        "dependencies": {
           "Microsoft.Extensions.FileProviders.Abstractions": "6.0.0",
           "Microsoft.Extensions.FileSystemGlobbing": "6.0.0",
           "Microsoft.Extensions.Primitives": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.FileSystemGlobbing/6.0.0": ***REMOVED******REMOVED***,
-      "Microsoft.Extensions.Identity.Core/6.0.10": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "Microsoft.Extensions.FileSystemGlobbing/6.0.0": {},
+      "Microsoft.Extensions.Identity.Core/6.0.10": {
+        "dependencies": {
           "Microsoft.AspNetCore.Cryptography.KeyDerivation": "6.0.10",
           "Microsoft.Extensions.Logging": "6.0.0",
           "Microsoft.Extensions.Options": "6.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/Microsoft.Extensions.Identity.Core.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Identity.Core.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.1022.47617"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.Identity.Stores/6.0.10": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.Extensions.Identity.Stores/6.0.10": {
+        "dependencies": {
           "Microsoft.Extensions.Caching.Abstractions": "6.0.0",
           "Microsoft.Extensions.Identity.Core": "6.0.10",
           "Microsoft.Extensions.Logging": "6.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/Microsoft.Extensions.Identity.Stores.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Extensions.Identity.Stores.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.1022.47617"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.Logging/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.Extensions.Logging/6.0.0": {
+        "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "6.0.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
           "Microsoft.Extensions.Options": "6.0.0",
           "System.Diagnostics.DiagnosticSource": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.Logging.Abstractions/6.0.0": ***REMOVED******REMOVED***,
-      "Microsoft.Extensions.Options/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {},
+      "Microsoft.Extensions.Options/6.0.0": {
+        "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Microsoft.Extensions.Primitives": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Extensions.Primitives/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "Microsoft.Extensions.Primitives/6.0.0": {
+        "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Identity.Client/4.21.1": ***REMOVED***
-        "runtime": ***REMOVED***
-          "lib/netcoreapp2.1/Microsoft.Identity.Client.dll": ***REMOVED***
+        }
+      },
+      "Microsoft.Identity.Client/4.21.1": {
+        "runtime": {
+          "lib/netcoreapp2.1/Microsoft.Identity.Client.dll": {
             "assemblyVersion": "4.21.1.0",
             "fileVersion": "4.21.1.0"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.IdentityModel.JsonWebTokens/6.10.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/6.10.0": {
+        "dependencies": {
           "Microsoft.IdentityModel.Tokens": "6.10.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
             "assemblyVersion": "6.10.0.0",
             "fileVersion": "6.10.0.20330"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.IdentityModel.Logging/6.10.0": ***REMOVED***
-        "runtime": ***REMOVED***
-          "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Logging/6.10.0": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll": {
             "assemblyVersion": "6.10.0.0",
             "fileVersion": "6.10.0.20330"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.IdentityModel.Protocols/6.10.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Protocols/6.10.0": {
+        "dependencies": {
           "Microsoft.IdentityModel.Logging": "6.10.0",
           "Microsoft.IdentityModel.Tokens": "6.10.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll": {
             "assemblyVersion": "6.10.0.0",
             "fileVersion": "6.10.0.20330"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.IdentityModel.Protocols.OpenIdConnect/6.10.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Protocols.OpenIdConnect/6.10.0": {
+        "dependencies": {
           "Microsoft.IdentityModel.Protocols": "6.10.0",
           "System.IdentityModel.Tokens.Jwt": "6.10.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {
             "assemblyVersion": "6.10.0.0",
             "fileVersion": "6.10.0.20330"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.IdentityModel.Tokens/6.10.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/6.10.0": {
+        "dependencies": {
           "Microsoft.CSharp": "4.5.0",
           "Microsoft.IdentityModel.Logging": "6.10.0",
           "System.Security.Cryptography.Cng": "4.5.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {
             "assemblyVersion": "6.10.0.0",
             "fileVersion": "6.10.0.20330"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.IO.RecyclableMemoryStream/2.3.2": ***REMOVED***
-        "runtime": ***REMOVED***
-          "lib/net5.0/Microsoft.IO.RecyclableMemoryStream.dll": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.IO.RecyclableMemoryStream/2.3.2": {
+        "runtime": {
+          "lib/net5.0/Microsoft.IO.RecyclableMemoryStream.dll": {
             "assemblyVersion": "2.3.2.0",
             "fileVersion": "2.3.2.0"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.NETCore.Platforms/3.1.0": ***REMOVED******REMOVED***,
-      "Microsoft.OpenApi/1.2.3": ***REMOVED***
-        "runtime": ***REMOVED***
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.NETCore.Platforms/3.1.0": {},
+      "Microsoft.OpenApi/1.2.3": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.OpenApi.dll": {
             "assemblyVersion": "1.2.3.0",
             "fileVersion": "1.2.3.0"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Win32.Registry/4.7.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Microsoft.Win32.Registry/4.7.0": {
+        "dependencies": {
           "System.Security.AccessControl": "4.7.0",
           "System.Security.Principal.Windows": "4.7.0"
-***REMOVED***
-  ***REMOVED***,
-      "Microsoft.Win32.SystemEvents/6.0.0": ***REMOVED***
-        "runtime": ***REMOVED***
-          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": ***REMOVED***
+        }
+      },
+      "Microsoft.Win32.SystemEvents/6.0.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.21.52210"
-  ***REMOVED***
-***REMOVED***,
-        "runtimeTargets": ***REMOVED***
-          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": ***REMOVED***
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.21.52210"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "MimeKit/4.2.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "MimeKit/4.2.0": {
+        "dependencies": {
           "BouncyCastle.Cryptography": "2.2.1",
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
           "System.Security.Cryptography.Pkcs": "7.0.2",
           "System.Text.Encoding.CodePages": "7.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/MimeKit.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/MimeKit.dll": {
             "assemblyVersion": "4.2.0.0",
             "fileVersion": "4.2.0.0"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "NETCore.MailKit/2.1.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "NETCore.MailKit/2.1.0": {
+        "dependencies": {
           "MailKit": "4.2.0",
           "Microsoft.Extensions.DependencyInjection": "6.0.1"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/netstandard2.1/NETCore.MailKit.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/netstandard2.1/NETCore.MailKit.dll": {
             "assemblyVersion": "2.1.0.0",
             "fileVersion": "2.1.0.0"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Swashbuckle.AspNetCore/6.2.3": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore/6.2.3": {
+        "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
           "Swashbuckle.AspNetCore.Swagger": "6.2.3",
           "Swashbuckle.AspNetCore.SwaggerGen": "6.2.3",
           "Swashbuckle.AspNetCore.SwaggerUI": "6.2.3"
-***REMOVED***
-  ***REMOVED***,
-      "Swashbuckle.AspNetCore.Swagger/6.2.3": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "Swashbuckle.AspNetCore.Swagger/6.2.3": {
+        "dependencies": {
           "Microsoft.OpenApi": "1.2.3"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll": {
             "assemblyVersion": "6.2.3.0",
             "fileVersion": "6.2.3.0"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Swashbuckle.AspNetCore.SwaggerGen/6.2.3": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerGen/6.2.3": {
+        "dependencies": {
           "Swashbuckle.AspNetCore.Swagger": "6.2.3"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
             "assemblyVersion": "6.2.3.0",
             "fileVersion": "6.2.3.0"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "Swashbuckle.AspNetCore.SwaggerUI/6.2.3": ***REMOVED***
-        "runtime": ***REMOVED***
-          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": ***REMOVED***
+          }
+        }
+      },
+      "Swashbuckle.AspNetCore.SwaggerUI/6.2.3": {
+        "runtime": {
+          "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
             "assemblyVersion": "6.2.3.0",
             "fileVersion": "6.2.3.0"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "System.Collections.Immutable/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "System.Collections.Immutable/6.0.0": {
+        "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "System.ComponentModel.Annotations/5.0.0": ***REMOVED******REMOVED***,
-      "System.Configuration.ConfigurationManager/4.7.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "System.ComponentModel.Annotations/5.0.0": {},
+      "System.Configuration.ConfigurationManager/4.7.0": {
+        "dependencies": {
           "System.Security.Cryptography.ProtectedData": "4.7.0",
           "System.Security.Permissions": "4.7.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
             "assemblyVersion": "4.0.3.0",
             "fileVersion": "4.700.19.56404"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "System.Diagnostics.DiagnosticSource/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/6.0.0": {
+        "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "System.Drawing.Common/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "System.Drawing.Common/6.0.0": {
+        "dependencies": {
           "Microsoft.Win32.SystemEvents": "6.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/System.Drawing.Common.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/System.Drawing.Common.dll": {
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.21.52210"
-  ***REMOVED***
-***REMOVED***,
-        "runtimeTargets": ***REMOVED***
-          "runtimes/unix/lib/net6.0/System.Drawing.Common.dll": ***REMOVED***
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/net6.0/System.Drawing.Common.dll": {
             "rid": "unix",
             "assetType": "runtime",
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.21.52210"
-  ***REMOVED***,
-          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": ***REMOVED***
+          },
+          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.21.52210"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "System.Formats.Asn1/7.0.0": ***REMOVED***
-        "runtime": ***REMOVED***
-          "lib/net6.0/System.Formats.Asn1.dll": ***REMOVED***
+          }
+        }
+      },
+      "System.Formats.Asn1/7.0.0": {
+        "runtime": {
+          "lib/net6.0/System.Formats.Asn1.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51805"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "System.IdentityModel.Tokens.Jwt/6.10.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "System.IdentityModel.Tokens.Jwt/6.10.0": {
+        "dependencies": {
           "Microsoft.IdentityModel.JsonWebTokens": "6.10.0",
           "Microsoft.IdentityModel.Tokens": "6.10.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {
             "assemblyVersion": "6.10.0.0",
             "fileVersion": "6.10.0.20330"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "System.Runtime.Caching/4.7.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "System.Runtime.Caching/4.7.0": {
+        "dependencies": {
           "System.Configuration.ConfigurationManager": "4.7.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/netstandard2.0/System.Runtime.Caching.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.Caching.dll": {
             "assemblyVersion": "4.0.1.0",
             "fileVersion": "4.700.19.56404"
-  ***REMOVED***
-***REMOVED***,
-        "runtimeTargets": ***REMOVED***
-          "runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll": ***REMOVED***
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll": {
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "4.0.1.0",
             "fileVersion": "4.700.19.56404"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": ***REMOVED******REMOVED***,
-      "System.Security.AccessControl/4.7.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "System.Security.AccessControl/4.7.0": {
+        "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
           "System.Security.Principal.Windows": "4.7.0"
-***REMOVED***
-  ***REMOVED***,
-      "System.Security.Cryptography.Cng/4.5.0": ***REMOVED******REMOVED***,
-      "System.Security.Cryptography.Pkcs/7.0.2": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "System.Security.Cryptography.Cng/4.5.0": {},
+      "System.Security.Cryptography.Pkcs/7.0.2": {
+        "dependencies": {
           "System.Formats.Asn1": "7.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/System.Security.Cryptography.Pkcs.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/System.Security.Cryptography.Pkcs.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.723.27404"
-  ***REMOVED***
-***REMOVED***,
-        "runtimeTargets": ***REMOVED***
-          "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.dll": ***REMOVED***
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Security.Cryptography.Pkcs.dll": {
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.723.27404"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "System.Security.Cryptography.ProtectedData/4.7.0": ***REMOVED***
-        "runtime": ***REMOVED***
-          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": ***REMOVED***
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/4.7.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
             "assemblyVersion": "4.0.5.0",
             "fileVersion": "4.700.19.56404"
-  ***REMOVED***
-***REMOVED***,
-        "runtimeTargets": ***REMOVED***
-          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": ***REMOVED***
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "4.0.5.0",
             "fileVersion": "4.700.19.56404"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "System.Security.Permissions/4.7.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "System.Security.Permissions/4.7.0": {
+        "dependencies": {
           "System.Security.AccessControl": "4.7.0",
           "System.Windows.Extensions": "4.7.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/netcoreapp3.0/System.Security.Permissions.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Security.Permissions.dll": {
             "assemblyVersion": "4.0.3.0",
             "fileVersion": "4.700.19.56404"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "System.Security.Principal.Windows/4.7.0": ***REMOVED******REMOVED***,
-      "System.Text.Encoding.CodePages/7.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "System.Security.Principal.Windows/4.7.0": {},
+      "System.Text.Encoding.CodePages/7.0.0": {
+        "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/net6.0/System.Text.Encoding.CodePages.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/net6.0/System.Text.Encoding.CodePages.dll": {
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51805"
-  ***REMOVED***
-***REMOVED***,
-        "runtimeTargets": ***REMOVED***
-          "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll": ***REMOVED***
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll": {
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "7.0.0.0",
             "fileVersion": "7.0.22.51805"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-      "System.Text.Encodings.Web/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+          }
+        }
+      },
+      "System.Text.Encodings.Web/6.0.0": {
+        "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "System.Text.Json/6.0.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "System.Text.Json/6.0.0": {
+        "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0",
           "System.Text.Encodings.Web": "6.0.0"
-***REMOVED***
-  ***REMOVED***,
-      "System.Windows.Extensions/4.7.0": ***REMOVED***
-        "dependencies": ***REMOVED***
+        }
+      },
+      "System.Windows.Extensions/4.7.0": {
+        "dependencies": {
           "System.Drawing.Common": "6.0.0"
-***REMOVED***,
-        "runtime": ***REMOVED***
-          "lib/netcoreapp3.0/System.Windows.Extensions.dll": ***REMOVED***
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Windows.Extensions.dll": {
             "assemblyVersion": "4.0.1.0",
             "fileVersion": "4.700.19.56404"
-  ***REMOVED***
-***REMOVED***,
-        "runtimeTargets": ***REMOVED***
-          "runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll": ***REMOVED***
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll": {
             "rid": "win",
             "assetType": "runtime",
             "assemblyVersion": "4.0.1.0",
             "fileVersion": "4.700.19.56404"
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***,
-  "libraries": ***REMOVED***
-    "ScoreManagementApi/1.0.0": ***REMOVED***
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ScoreManagementApi/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
-***REMOVED***,
-    "BouncyCastle.Cryptography/2.2.1": ***REMOVED***
+    },
+    "BouncyCastle.Cryptography/2.2.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-A6Zr52zVqJKt18ZBsTnX0qhG0kwIQftVAjLmszmkiR/trSp8H+xj1gUOzk7XHwaKgyREMSV1v9XaKrBUeIOdvQ==",
       "path": "bouncycastle.cryptography/2.2.1",
       "hashPath": "bouncycastle.cryptography.2.2.1.nupkg.sha512"
-***REMOVED***,
-    "EPPlus/7.0.1": ***REMOVED***
+    },
+    "EPPlus/7.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-eNTOmxcexmUskNUb4PQNNNtsqP5LXfNYBMkVnze1G09KmGxXgVB7kd6Ogm3/6NZSZmRisMjsyUKa0rUoExhJGA==",
       "path": "epplus/7.0.1",
       "hashPath": "epplus.7.0.1.nupkg.sha512"
-***REMOVED***,
-    "EPPlus.Interfaces/6.1.1": ***REMOVED***
+    },
+    "EPPlus.Interfaces/6.1.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-y7dkrOoE1ZR9Vgy1Jf2rEIaTf3SHlUjYt01NklP+F5Qh7S2ruPbzTcpYLRWMeXiG8XL8h2jqX4CyIkFt3NQGZw==",
       "path": "epplus.interfaces/6.1.1",
       "hashPath": "epplus.interfaces.6.1.1.nupkg.sha512"
-***REMOVED***,
-    "EPPlus.System.Drawing/6.1.1": ***REMOVED***
+    },
+    "EPPlus.System.Drawing/6.1.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-lRF5gHYrmkHOOiLMI0t6q8zNYjUrzRgAM5BCXumv5xiqXko8fx3AWI+HCNZfhEqVFGOop+42KfR5GiUcCoyoMw==",
       "path": "epplus.system.drawing/6.1.1",
       "hashPath": "epplus.system.drawing.6.1.1.nupkg.sha512"
-***REMOVED***,
-    "Humanizer.Core/2.8.26": ***REMOVED***
+    },
+    "Humanizer.Core/2.8.26": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
-***REMOVED***,
-    "MailKit/4.2.0": ***REMOVED***
+    },
+    "MailKit/4.2.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-NXm66YkEHyLXSyH1Ga/dUS8SB0vYTlGESUluLULa7pG0/eK8c/R9JzMyH0KbKQsgpLGwbji9quAlrcUOL0OjPA==",
       "path": "mailkit/4.2.0",
       "hashPath": "mailkit.4.2.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.10": ***REMOVED***
+    },
+    "Microsoft.AspNetCore.Authentication.JwtBearer/6.0.10": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-4SBTyAuYHSiFi/AiqlKiKpl2+EkKaS/q1zeDI4L88cMmy5P01pse25gOAyzfWycI8voz+d1FwTIuqhWCH87IJQ==",
       "path": "microsoft.aspnetcore.authentication.jwtbearer/6.0.10",
       "hashPath": "microsoft.aspnetcore.authentication.jwtbearer.6.0.10.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.AspNetCore.Cryptography.Internal/6.0.10": ***REMOVED***
+    },
+    "Microsoft.AspNetCore.Cryptography.Internal/6.0.10": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-F4YiT2L1H2p5imDno6nGMd/h9y3s0jpCbP0DvvCHA72b2TFRVHaE5qeGqeDkcRMK9d6RauVhXGiAT0zTY6DT+w==",
       "path": "microsoft.aspnetcore.cryptography.internal/6.0.10",
       "hashPath": "microsoft.aspnetcore.cryptography.internal.6.0.10.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.10": ***REMOVED***
+    },
+    "Microsoft.AspNetCore.Cryptography.KeyDerivation/6.0.10": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ziq8vzvlVN0yKHzUp+z0qwZoSU2P/XUdNsEJxRzLRg1HbHp11Za6c2cuR6f+MgjxLHGkCupSam5b9is4sJSs5A==",
       "path": "microsoft.aspnetcore.cryptography.keyderivation/6.0.10",
       "hashPath": "microsoft.aspnetcore.cryptography.keyderivation.6.0.10.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/6.0.10": ***REMOVED***
+    },
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/6.0.10": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-GLynXPCJFSNELz/umiKY4xje2NG3f84e0zXdpzGJ121vd/doHnRkcO67aVulk0Ek1vsZ24zTnju1zrzsqU+wSg==",
       "path": "microsoft.aspnetcore.identity.entityframeworkcore/6.0.10",
       "hashPath": "microsoft.aspnetcore.identity.entityframeworkcore.6.0.10.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.CSharp/4.5.0": ***REMOVED***
+    },
+    "Microsoft.CSharp/4.5.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "path": "microsoft.csharp/4.5.0",
       "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Data.SqlClient/2.1.4": ***REMOVED***
+    },
+    "Microsoft.Data.SqlClient/2.1.4": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-cDcKBTKILdRuAzJjbgXwGcUQXzMue+SG02kD4tZTXXfoz4ALrGLpCnA5k9khw3fnAMlMnRzLIGuvRdJurqmESA==",
       "path": "microsoft.data.sqlclient/2.1.4",
       "hashPath": "microsoft.data.sqlclient.2.1.4.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Data.SqlClient.SNI.runtime/2.1.1": ***REMOVED***
+    },
+    "Microsoft.Data.SqlClient.SNI.runtime/2.1.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-JwGDWkyZgm7SATJmFLfT2G4teimvNbNtq3lsS9a5DzvhEZnQrZjZhevCU0vdx8MjheLHoG5vocuO03QtioFQxQ==",
       "path": "microsoft.data.sqlclient.sni.runtime/2.1.1",
       "hashPath": "microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.EntityFrameworkCore/6.0.10": ***REMOVED***
+    },
+    "Microsoft.EntityFrameworkCore/6.0.10": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-aMk8c7XKynkDJM8vnRuVz3VHSLiWy4tWpkvSdrQ4No1DNLdtTI6P3iT2wAPvVkuJsS22Ifs62/Jr6AyveX5b4A==",
       "path": "microsoft.entityframeworkcore/6.0.10",
       "hashPath": "microsoft.entityframeworkcore.6.0.10.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.EntityFrameworkCore.Abstractions/6.0.10": ***REMOVED***
+    },
+    "Microsoft.EntityFrameworkCore.Abstractions/6.0.10": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-3BMwnBB6Bgwd6bjUqx2pOYuHpGBHCJxY3vorRJYX3U2wzrz5q4jNxDZZGsMViFZeJ7PXFIwbgy6rR73J5aalsg==",
       "path": "microsoft.entityframeworkcore.abstractions/6.0.10",
       "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.10.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.EntityFrameworkCore.Analyzers/6.0.10": ***REMOVED***
+    },
+    "Microsoft.EntityFrameworkCore.Analyzers/6.0.10": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-b4jKcjo6BLuBRjLTkZPjJCvZ7oa3a798Q1AXSMAknitpBEOEIDryyRd7XZ0cnEIVCvfSND+Trgb00Z4TiTqOvg==",
       "path": "microsoft.entityframeworkcore.analyzers/6.0.10",
       "hashPath": "microsoft.entityframeworkcore.analyzers.6.0.10.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.EntityFrameworkCore.Design/6.0.10": ***REMOVED***
+    },
+    "Microsoft.EntityFrameworkCore.Design/6.0.10": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-SVqDfUftgBoKCMPfTaWXiKBZPHMjbiBJLE5WE7MeD28nTk7CkmUNX8eXyNIeWxpDuk4r0zZ6XG9zyG7Ef3KS4A==",
       "path": "microsoft.entityframeworkcore.design/6.0.10",
       "hashPath": "microsoft.entityframeworkcore.design.6.0.10.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.EntityFrameworkCore.Relational/6.0.10": ***REMOVED***
+    },
+    "Microsoft.EntityFrameworkCore.Relational/6.0.10": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-8rjVzKtGSTojSefghXqh3Y2wq8A7P7iWuUQQyQieXNYrYA7nw2aHZI2rjU+7ta4jHgKITddUHFaPQJ69H18dQA==",
       "path": "microsoft.entityframeworkcore.relational/6.0.10",
       "hashPath": "microsoft.entityframeworkcore.relational.6.0.10.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.EntityFrameworkCore.SqlServer/6.0.10": ***REMOVED***
+    },
+    "Microsoft.EntityFrameworkCore.SqlServer/6.0.10": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-A5xZ2yO3zdYdZKlX90AjMruftIT73ApG2yW11T7sougUi1HyzpTh9/RF9LaLeMxZVzIAjuKvb7WkVzxduc2/Kg==",
       "path": "microsoft.entityframeworkcore.sqlserver/6.0.10",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.6.0.10.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.EntityFrameworkCore.Tools/6.0.10": ***REMOVED***
+    },
+    "Microsoft.EntityFrameworkCore.Tools/6.0.10": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-LWQvCb3lmTxkcnzO8H0ib0Ot/Pow9Kubt2iqvhhAHEbhs7SS1ygB938EpmuD9o1yyyliAg6FHln5o6jVfEkdyQ==",
       "path": "microsoft.entityframeworkcore.tools/6.0.10",
       "hashPath": "microsoft.entityframeworkcore.tools.6.0.10.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.ApiDescription.Server/3.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
       "path": "microsoft.extensions.apidescription.server/3.0.0",
       "hashPath": "microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.Caching.Abstractions/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-bcz5sSFJbganH0+YrfvIjJDIcKNW7TL07C4d1eTmXy/wOt52iz4LVogJb6pazs7W0+74j0YpXFErvp++Aq5Bsw==",
       "path": "microsoft.extensions.caching.abstractions/6.0.0",
       "hashPath": "microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.Caching.Memory/6.0.1": ***REMOVED***
+    },
+    "Microsoft.Extensions.Caching.Memory/6.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-B4y+Cev05eMcjf1na0v9gza6GUtahXbtY1JCypIgx3B4Ea/KAgsWyXEmW4q6zMbmTMtKzmPVk09rvFJirvMwTg==",
       "path": "microsoft.extensions.caching.memory/6.0.1",
       "hashPath": "microsoft.extensions.caching.memory.6.0.1.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.Configuration/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.Configuration/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-tq2wXyh3fL17EMF2bXgRhU7JrbO3on93MRKYxzz4JzzvuGSA1l0W3GI9/tl8EO89TH+KWEymP7bcFway6z9fXg==",
       "path": "microsoft.extensions.configuration/6.0.0",
       "hashPath": "microsoft.extensions.configuration.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.Configuration.Abstractions/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-qWzV9o+ZRWq+pGm+1dF+R7qTgTYoXvbyowRoBxQJGfqTpqDun2eteerjRQhq5PQ/14S+lqto3Ft4gYaRyl4rdQ==",
       "path": "microsoft.extensions.configuration.abstractions/6.0.0",
       "hashPath": "microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.Configuration.FileExtensions/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.Configuration.FileExtensions/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-V4Dth2cYMZpw3HhGw9XUDIijpI6gN+22LDt0AhufIgOppCUfpWX4483OmN+dFXRJkJLc8Tv0Q8QK+1ingT2+KQ==",
       "path": "microsoft.extensions.configuration.fileextensions/6.0.0",
       "hashPath": "microsoft.extensions.configuration.fileextensions.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.Configuration.Json/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.Configuration.Json/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-GJGery6QytCzS/BxJ96klgG9in3uH26KcUBbiVG/coNDXCRq6LGVVlUT4vXq34KPuM+R2av+LeYdX9h4IZOCUg==",
       "path": "microsoft.extensions.configuration.json/6.0.0",
       "hashPath": "microsoft.extensions.configuration.json.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.DependencyInjection/6.0.1": ***REMOVED***
+    },
+    "Microsoft.Extensions.DependencyInjection/6.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-vWXPg3HJQIpZkENn1KWq8SfbqVujVD7S7vIAyFXXqK5xkf1Vho+vG0bLBCHxU36lD1cLLtmGpfYf0B3MYFi9tQ==",
       "path": "microsoft.extensions.dependencyinjection/6.0.1",
       "hashPath": "microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
       "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.FileProviders.Abstractions/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.FileProviders.Abstractions/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-0pd4/fho0gC12rQswaGQxbU34jOS1TPS8lZPpkFCH68ppQjHNHYle9iRuHeev1LhrJ94YPvzcRd8UmIuFk23Qw==",
       "path": "microsoft.extensions.fileproviders.abstractions/6.0.0",
       "hashPath": "microsoft.extensions.fileproviders.abstractions.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.FileProviders.Physical/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.FileProviders.Physical/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-QvkL7l0nM8udt3gfyu0Vw8bbCXblxaKOl7c2oBfgGy4LCURRaL9XWZX1FWJrQc43oMokVneVxH38iz+bY1sbhg==",
       "path": "microsoft.extensions.fileproviders.physical/6.0.0",
       "hashPath": "microsoft.extensions.fileproviders.physical.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.FileSystemGlobbing/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.FileSystemGlobbing/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ip8jnL1aPiaPeKINCqaTEbvBFDmVx9dXQEBZ2HOBRXPD1eabGNqP/bKlsIcp7U2lGxiXd5xIhoFcmY8nM4Hdiw==",
       "path": "microsoft.extensions.filesystemglobbing/6.0.0",
       "hashPath": "microsoft.extensions.filesystemglobbing.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.Identity.Core/6.0.10": ***REMOVED***
+    },
+    "Microsoft.Extensions.Identity.Core/6.0.10": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-/w7FSk2rqeFmbVgc5zDnCnSxJHoiYmmFpgke3P4F6XyoX6Pb2cAgrYnPLm1TzDgtK0V/nIRgz0r+mP4fq0MSxw==",
       "path": "microsoft.extensions.identity.core/6.0.10",
       "hashPath": "microsoft.extensions.identity.core.6.0.10.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.Identity.Stores/6.0.10": ***REMOVED***
+    },
+    "Microsoft.Extensions.Identity.Stores/6.0.10": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-a0OGDd75e24oBnDCb8gKfV94DjqX+BDgf86IRAp96TFz//6F1v6OjHz5IBJ6yJoy9A1XlzC/HKV7e4n4uuGdiw==",
       "path": "microsoft.extensions.identity.stores/6.0.10",
       "hashPath": "microsoft.extensions.identity.stores.6.0.10.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.Logging/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.Logging/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-eIbyj40QDg1NDz0HBW0S5f3wrLVnKWnDJ/JtZ+yJDFnDj90VoPuoPmFkeaXrtu+0cKm5GRAwoDf+dBWXK0TUdg==",
       "path": "microsoft.extensions.logging/6.0.0",
       "hashPath": "microsoft.extensions.logging.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.Logging.Abstractions/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-/HggWBbTwy8TgebGSX5DBZ24ndhzi93sHUBDvP1IxbZD7FDokYzdAr6+vbWGjw2XAfR2EJ1sfKUotpjHnFWPxA==",
       "path": "microsoft.extensions.logging.abstractions/6.0.0",
       "hashPath": "microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.Options/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.Options/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-dzXN0+V1AyjOe2xcJ86Qbo233KHuLEY0njf/P2Kw8SfJU+d45HNS2ctJdnEnrWbM9Ye2eFgaC5Mj9otRMU6IsQ==",
       "path": "microsoft.extensions.options/6.0.0",
       "hashPath": "microsoft.extensions.options.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Extensions.Primitives/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Extensions.Primitives/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-9+PnzmQFfEFNR9J2aDTfJGGupShHjOuGw4VUv+JB044biSHrnmCIMD+mJHmb2H7YryrfBEXDurxQ47gJZdCKNQ==",
       "path": "microsoft.extensions.primitives/6.0.0",
       "hashPath": "microsoft.extensions.primitives.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Identity.Client/4.21.1": ***REMOVED***
+    },
+    "Microsoft.Identity.Client/4.21.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-vycgk7S/HAbHaUaK4Tid1fsWHsXdFRRP2KavAIOHCVV27zvuQfYAjXmMvctuuF4egydSumG58CwPZob3gWeYgQ==",
       "path": "microsoft.identity.client/4.21.1",
       "hashPath": "microsoft.identity.client.4.21.1.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.IdentityModel.JsonWebTokens/6.10.0": ***REMOVED***
+    },
+    "Microsoft.IdentityModel.JsonWebTokens/6.10.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-0qjS31rN1MQTc46tAYbzmMTSRfdV5ndZxSjYxIGqKSidd4wpNJfNII/pdhU5Fx8olarQoKL9lqqYw4yNOIwT0Q==",
       "path": "microsoft.identitymodel.jsonwebtokens/6.10.0",
       "hashPath": "microsoft.identitymodel.jsonwebtokens.6.10.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.IdentityModel.Logging/6.10.0": ***REMOVED***
+    },
+    "Microsoft.IdentityModel.Logging/6.10.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-zbcwV6esnNzhZZ/VP87dji6VrUBLB5rxnZBkDMqNYpyG+nrBnBsbm4PUYLCBMUflHCM9EMLDG0rLnqqT+l0ldA==",
       "path": "microsoft.identitymodel.logging/6.10.0",
       "hashPath": "microsoft.identitymodel.logging.6.10.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.IdentityModel.Protocols/6.10.0": ***REMOVED***
+    },
+    "Microsoft.IdentityModel.Protocols/6.10.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-DFyXD0xylP+DknCT3hzJ7q/Q5qRNu0hO/gCU90O0ATdR0twZmlcuY9RNYaaDofXKVbzcShYNCFCGle2G/o8mkg==",
       "path": "microsoft.identitymodel.protocols/6.10.0",
       "hashPath": "microsoft.identitymodel.protocols.6.10.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.IdentityModel.Protocols.OpenIdConnect/6.10.0": ***REMOVED***
+    },
+    "Microsoft.IdentityModel.Protocols.OpenIdConnect/6.10.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-LVvMXAWPbPeEWTylDrxunlHH2wFyE4Mv0L4gZrJHC4HTESbWHquKZb/y/S8jgiQEDycOP0PDQvbG4RR/tr2TVQ==",
       "path": "microsoft.identitymodel.protocols.openidconnect/6.10.0",
       "hashPath": "microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.IdentityModel.Tokens/6.10.0": ***REMOVED***
+    },
+    "Microsoft.IdentityModel.Tokens/6.10.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-qbf1NslutDB4oLrriYTJpy7oB1pbh2ej2lEHd2IPDQH9C74ysOdhU5wAC7KoXblldbo7YsNR2QYFOqQM/b0Rsg==",
       "path": "microsoft.identitymodel.tokens/6.10.0",
       "hashPath": "microsoft.identitymodel.tokens.6.10.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.IO.RecyclableMemoryStream/2.3.2": ***REMOVED***
+    },
+    "Microsoft.IO.RecyclableMemoryStream/2.3.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-Oh1qXXFdJFcHozvb4H6XYLf2W0meZFuG0A+TfapFPj9z5fd4vxiARGEhAaLj/6XWQaMYIv4SH/9Q6H78Hw0E2Q==",
       "path": "microsoft.io.recyclablememorystream/2.3.2",
       "hashPath": "microsoft.io.recyclablememorystream.2.3.2.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.NETCore.Platforms/3.1.0": ***REMOVED***
+    },
+    "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "path": "microsoft.netcore.platforms/3.1.0",
       "hashPath": "microsoft.netcore.platforms.3.1.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.OpenApi/1.2.3": ***REMOVED***
+    },
+    "Microsoft.OpenApi/1.2.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
       "path": "microsoft.openapi/1.2.3",
       "hashPath": "microsoft.openapi.1.2.3.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Win32.Registry/4.7.0": ***REMOVED***
+    },
+    "Microsoft.Win32.Registry/4.7.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-KSrRMb5vNi0CWSGG1++id2ZOs/1QhRqROt+qgbEAdQuGjGrFcl4AOl4/exGPUYz2wUnU42nvJqon1T3U0kPXLA==",
       "path": "microsoft.win32.registry/4.7.0",
       "hashPath": "microsoft.win32.registry.4.7.0.nupkg.sha512"
-***REMOVED***,
-    "Microsoft.Win32.SystemEvents/6.0.0": ***REMOVED***
+    },
+    "Microsoft.Win32.SystemEvents/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-hqTM5628jSsQiv+HGpiq3WKBl2c8v1KZfby2J6Pr7pEPlK9waPdgEO6b8A/+/xn/yZ9ulv8HuqK71ONy2tg67A==",
       "path": "microsoft.win32.systemevents/6.0.0",
       "hashPath": "microsoft.win32.systemevents.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "MimeKit/4.2.0": ***REMOVED***
+    },
+    "MimeKit/4.2.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-HlfWiJ6t40r8u/rCK2p/8dm1ILiWw4XHucm2HImDYIFS3uZe7IKZyaCDafEoZR7VG7AW1JQxNPQCAxmAnJfRvA==",
       "path": "mimekit/4.2.0",
       "hashPath": "mimekit.4.2.0.nupkg.sha512"
-***REMOVED***,
-    "NETCore.MailKit/2.1.0": ***REMOVED***
+    },
+    "NETCore.MailKit/2.1.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-+1C0sg4YJQczp/2RVrVbKLIntg7Mou7Ie5M01UBiAsxmIarjfBRlCgKK4sEbPyGask52VRKV29/Zi+41B6LPXA==",
       "path": "netcore.mailkit/2.1.0",
       "hashPath": "netcore.mailkit.2.1.0.nupkg.sha512"
-***REMOVED***,
-    "Swashbuckle.AspNetCore/6.2.3": ***REMOVED***
+    },
+    "Swashbuckle.AspNetCore/6.2.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-cnzQDn0Le+hInsw2SYwlOhOCPXpYi/szcvnyqZJ12v+QyrLBwAmWXBg6RIyHB18s/mLeywC+Rg2O9ndz0IUNYQ==",
       "path": "swashbuckle.aspnetcore/6.2.3",
       "hashPath": "swashbuckle.aspnetcore.6.2.3.nupkg.sha512"
-***REMOVED***,
-    "Swashbuckle.AspNetCore.Swagger/6.2.3": ***REMOVED***
+    },
+    "Swashbuckle.AspNetCore.Swagger/6.2.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-qOF7j1sL0bWm8g/qqHVPCvkO3JlVvUIB8WfC98kSh6BT5y5DAnBNctfac7XR5EZf+eD7/WasvANncTqwZYfmWQ==",
       "path": "swashbuckle.aspnetcore.swagger/6.2.3",
       "hashPath": "swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512"
-***REMOVED***,
-    "Swashbuckle.AspNetCore.SwaggerGen/6.2.3": ***REMOVED***
+    },
+    "Swashbuckle.AspNetCore.SwaggerGen/6.2.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-+Xq7WdMCCfcXlnbLJVFNgY8ITdP2TRYIlpbt6IKzDw5FwFxdi9lBfNDtcT+/wkKwX70iBBFmXldnnd02/VO72A==",
       "path": "swashbuckle.aspnetcore.swaggergen/6.2.3",
       "hashPath": "swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512"
-***REMOVED***,
-    "Swashbuckle.AspNetCore.SwaggerUI/6.2.3": ***REMOVED***
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/6.2.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-bCRI87uKJVb4G+KURWm8LQrL64St04dEFZcF6gIM67Zc0Sr/N47EO83ybLMYOvfNdO1DCv8xwPcrz9J/VEhQ5g==",
       "path": "swashbuckle.aspnetcore.swaggerui/6.2.3",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
-***REMOVED***,
-    "System.Collections.Immutable/6.0.0": ***REMOVED***
+    },
+    "System.Collections.Immutable/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-l4zZJ1WU2hqpQQHXz1rvC3etVZN+2DLmQMO79FhOTZHMn8tDRr+WU287sbomD0BETlmKDn0ygUgVy9k5xkkJdA==",
       "path": "system.collections.immutable/6.0.0",
       "hashPath": "system.collections.immutable.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "System.ComponentModel.Annotations/5.0.0": ***REMOVED***
+    },
+    "System.ComponentModel.Annotations/5.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-dMkqfy2el8A8/I76n2Hi1oBFEbG1SfxD2l5nhwXV3XjlnOmwxJlQbYpJH4W51odnU9sARCSAgv7S3CyAFMkpYg==",
       "path": "system.componentmodel.annotations/5.0.0",
       "hashPath": "system.componentmodel.annotations.5.0.0.nupkg.sha512"
-***REMOVED***,
-    "System.Configuration.ConfigurationManager/4.7.0": ***REMOVED***
+    },
+    "System.Configuration.ConfigurationManager/4.7.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-/anOTeSZCNNI2zDilogWrZ8pNqCmYbzGNexUnNhjW8k0sHqEZ2nHJBp147jBV3hGYswu5lINpNg1vxR7bnqvVA==",
       "path": "system.configuration.configurationmanager/4.7.0",
       "hashPath": "system.configuration.configurationmanager.4.7.0.nupkg.sha512"
-***REMOVED***,
-    "System.Diagnostics.DiagnosticSource/6.0.0": ***REMOVED***
+    },
+    "System.Diagnostics.DiagnosticSource/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw==",
       "path": "system.diagnostics.diagnosticsource/6.0.0",
       "hashPath": "system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "System.Drawing.Common/6.0.0": ***REMOVED***
+    },
+    "System.Drawing.Common/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-NfuoKUiP2nUWwKZN6twGqXioIe1zVD0RIj2t976A+czLHr2nY454RwwXs6JU9Htc6mwqL6Dn/nEL3dpVf2jOhg==",
       "path": "system.drawing.common/6.0.0",
       "hashPath": "system.drawing.common.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "System.Formats.Asn1/7.0.0": ***REMOVED***
+    },
+    "System.Formats.Asn1/7.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-+nfpV0afLmvJW8+pLlHxRjz3oZJw4fkyU9MMEaMhCsHi/SN9bGF9q79ROubDiwTiCHezmK0uCWkPP7tGFP/4yg==",
       "path": "system.formats.asn1/7.0.0",
       "hashPath": "system.formats.asn1.7.0.0.nupkg.sha512"
-***REMOVED***,
-    "System.IdentityModel.Tokens.Jwt/6.10.0": ***REMOVED***
+    },
+    "System.IdentityModel.Tokens.Jwt/6.10.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-C+Q5ORsFycRkRuvy/Xd0Pv5xVpmWSAvQYZAGs7VQogmkqlLhvfZXTgBIlHqC3cxkstSoLJAYx6xZB7foQ2y5eg==",
       "path": "system.identitymodel.tokens.jwt/6.10.0",
       "hashPath": "system.identitymodel.tokens.jwt.6.10.0.nupkg.sha512"
-***REMOVED***,
-    "System.Runtime.Caching/4.7.0": ***REMOVED***
+    },
+    "System.Runtime.Caching/4.7.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-NdvNRjTPxYvIEhXQszT9L9vJhdQoX6AQ0AlhjTU+5NqFQVuacJTfhPVAvtGWNA2OJCqRiR/okBcZgMwI6MqcZg==",
       "path": "system.runtime.caching/4.7.0",
       "hashPath": "system.runtime.caching.4.7.0.nupkg.sha512"
-***REMOVED***,
-    "System.Runtime.CompilerServices.Unsafe/6.0.0": ***REMOVED***
+    },
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "System.Security.AccessControl/4.7.0": ***REMOVED***
+    },
+    "System.Security.AccessControl/4.7.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg==",
       "path": "system.security.accesscontrol/4.7.0",
       "hashPath": "system.security.accesscontrol.4.7.0.nupkg.sha512"
-***REMOVED***,
-    "System.Security.Cryptography.Cng/4.5.0": ***REMOVED***
+    },
+    "System.Security.Cryptography.Cng/4.5.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-WG3r7EyjUe9CMPFSs6bty5doUqT+q9pbI80hlNzo2SkPkZ4VTuZkGWjpp77JB8+uaL4DFPRdBsAY+DX3dBK92A==",
       "path": "system.security.cryptography.cng/4.5.0",
       "hashPath": "system.security.cryptography.cng.4.5.0.nupkg.sha512"
-***REMOVED***,
-    "System.Security.Cryptography.Pkcs/7.0.2": ***REMOVED***
+    },
+    "System.Security.Cryptography.Pkcs/7.0.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-xhFNJOcQSWhpiVGLLBQYoxAltQSQVycMkwaX1z7I7oEdT9Wr0HzSM1yeAbfoHaERIYd5s6EpLSOLs2qMchSKlA==",
       "path": "system.security.cryptography.pkcs/7.0.2",
       "hashPath": "system.security.cryptography.pkcs.7.0.2.nupkg.sha512"
-***REMOVED***,
-    "System.Security.Cryptography.ProtectedData/4.7.0": ***REMOVED***
+    },
+    "System.Security.Cryptography.ProtectedData/4.7.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ehYW0m9ptxpGWvE4zgqongBVWpSDU/JCFD4K7krxkQwSz/sFQjEXCUqpvencjy6DYDbn7Ig09R8GFffu8TtneQ==",
       "path": "system.security.cryptography.protecteddata/4.7.0",
       "hashPath": "system.security.cryptography.protecteddata.4.7.0.nupkg.sha512"
-***REMOVED***,
-    "System.Security.Permissions/4.7.0": ***REMOVED***
+    },
+    "System.Security.Permissions/4.7.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-dkOV6YYVBnYRa15/yv004eCGRBVADXw8qRbbNiCn/XpdJSUXkkUeIvdvFHkvnko4CdKMqG8yRHC4ox83LSlMsQ==",
       "path": "system.security.permissions/4.7.0",
       "hashPath": "system.security.permissions.4.7.0.nupkg.sha512"
-***REMOVED***,
-    "System.Security.Principal.Windows/4.7.0": ***REMOVED***
+    },
+    "System.Security.Principal.Windows/4.7.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
-***REMOVED***,
-    "System.Text.Encoding.CodePages/7.0.0": ***REMOVED***
+    },
+    "System.Text.Encoding.CodePages/7.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-LSyCblMpvOe0N3E+8e0skHcrIhgV2huaNcjUUEa8hRtgEAm36aGkRoC8Jxlb6Ra6GSfF29ftduPNywin8XolzQ==",
       "path": "system.text.encoding.codepages/7.0.0",
       "hashPath": "system.text.encoding.codepages.7.0.0.nupkg.sha512"
-***REMOVED***,
-    "System.Text.Encodings.Web/6.0.0": ***REMOVED***
+    },
+    "System.Text.Encodings.Web/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-Vg8eB5Tawm1IFqj4TVK1czJX89rhFxJo9ELqc/Eiq0eXy13RK00eubyU6TJE6y+GQXjyV5gSfiewDUZjQgSE0w==",
       "path": "system.text.encodings.web/6.0.0",
       "hashPath": "system.text.encodings.web.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "System.Text.Json/6.0.0": ***REMOVED***
+    },
+    "System.Text.Json/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-zaJsHfESQvJ11vbXnNlkrR46IaMULk/gHxYsJphzSF+07kTjPHv+Oc14w6QEOfo3Q4hqLJgStUaYB9DBl0TmWg==",
       "path": "system.text.json/6.0.0",
       "hashPath": "system.text.json.6.0.0.nupkg.sha512"
-***REMOVED***,
-    "System.Windows.Extensions/4.7.0": ***REMOVED***
+    },
+    "System.Windows.Extensions/4.7.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
-***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    }
+  }
+}

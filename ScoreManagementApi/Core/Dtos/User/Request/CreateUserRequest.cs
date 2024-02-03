@@ -1,13 +1,13 @@
-***REMOVED***
+﻿
 namespace ScoreManagementApi.Core.Dtos.User.Request
-***REMOVED***
+{
     public class CreateUserRequest
-    ***REMOVED***
-        public string FullName ***REMOVED*** get; set; ***REMOVED***
-        public string UserName ***REMOVED*** get; set; ***REMOVED***
-        public string Email ***REMOVED*** get; set; ***REMOVED***
-        public string Password ***REMOVED*** get; set; ***REMOVED***
-        public bool Gender ***REMOVED*** get; set; ***REMOVED***
+    {
+        public string FullName { get; set; }
+        public string UserName { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public bool Gender { get; set; }
 
-***REMOVED***
-***REMOVED***
+    }
+}

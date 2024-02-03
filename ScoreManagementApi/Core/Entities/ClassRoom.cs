@@ -1,28 +1,28 @@
-***REMOVED***using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ScoreManagementApi.Core.Entities
-***REMOVED***
+{
     public class ClassRoom
-    ***REMOVED***
-        public int Id ***REMOVED*** get; set; ***REMOVED***
+    {
+        public int Id { get; set; }
         
         [MaxLength(150)]
         [Required]
-        public string Name ***REMOVED*** get; set; ***REMOVED***
+        public string Name { get; set; }
         
-        public bool Active ***REMOVED*** get; set; ***REMOVED***
+        public bool Active { get; set; }
 
         [ForeignKey("Teacher")]
-        public string? TeacherId ***REMOVED*** get; set; ***REMOVED***
-        public User? Teacher ***REMOVED*** get; set; ***REMOVED***
+        public string? TeacherId { get; set; }
+        public User? Teacher { get; set; }
 
         [ForeignKey("Creator")]
-        public string? CreatorId ***REMOVED*** get; set; ***REMOVED***
-        public User? Creator ***REMOVED*** get; set; ***REMOVED***
-        public DateTime CreatedAt ***REMOVED*** get; set; ***REMOVED***
-        public int SubjectId ***REMOVED*** get; set; ***REMOVED***
-        public virtual Subject Subject ***REMOVED*** get; set; ***REMOVED***
-        public virtual List<ClassStudent> ClassStudents ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        public string? CreatorId { get; set; }
+        public User? Creator { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public int SubjectId { get; set; }
+        public virtual Subject Subject { get; set; }
+        public virtual List<ClassStudent> ClassStudents { get; set; }
+    }
+}

@@ -1,8 +1,8 @@
-***REMOVED***namespace ScoreManagementApi.Core.Dtos.ClassRoomDto
-***REMOVED***
+﻿namespace ScoreManagementApi.Core.Dtos.ClassRoomDto
+{
     public class ClassRoomTiny
-    ***REMOVED***
-        public int Id ***REMOVED*** get; set; ***REMOVED***
-        public int Name ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+    {
+        public int Id { get; set; }
+        public int Name { get; set; }
+    }
+}

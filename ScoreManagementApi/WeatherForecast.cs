@@ -1,13 +1,13 @@
 namespace ScoreManagementApi
-***REMOVED***
+{
     public class WeatherForecast
-    ***REMOVED***
-        public DateTime Date ***REMOVED*** get; set; ***REMOVED***
+    {
+        public DateTime Date { get; set; }
 
-        public int TemperatureC ***REMOVED*** get; set; ***REMOVED***
+        public int TemperatureC { get; set; }
 
         public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 
-        public string? Summary ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        public string? Summary { get; set; }
+    }
+}

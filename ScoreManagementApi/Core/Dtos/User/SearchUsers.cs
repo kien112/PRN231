@@ -1,17 +1,17 @@
-***REMOVED***using ScoreManagementApi.Core.Dtos.Common;
+﻿using ScoreManagementApi.Core.Dtos.Common;
 using ScoreManagementApi.Core.Dtos.User.Response;
 using ScoreManagementApi.Core.OtherObjects;
 
 namespace ScoreManagementApi.Core.Dtos.User
-***REMOVED***
+{
     public class SearchUsers : SearchList<UserResponse>
-    ***REMOVED***
-        public string? KeyWord ***REMOVED*** get; set; ***REMOVED***
-        public string? Role ***REMOVED*** get; set; ***REMOVED***
-        public string? Gender ***REMOVED*** get; set; ***REMOVED***
+    {
+        public string? KeyWord { get; set; }
+        public string? Role { get; set; }
+        public string? Gender { get; set; }
 
         public new void ValidateInput()
-        ***REMOVED***
+        {
             base.ValidateInput();
             
             if (KeyWord != null)
@@ -24,6 +24,6 @@ namespace ScoreManagementApi.Core.Dtos.User
             if(Gender != null && !Gender.ToUpper().Equals(StaticString.FEMALE) 
                 && !Gender.ToUpper().Equals(StaticString.MALE))
                 Gender = null;
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

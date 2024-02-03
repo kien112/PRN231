@@ -1,20 +1,20 @@
-***REMOVED***
-  "runtimeOptions": ***REMOVED***
+{
+  "runtimeOptions": {
     "tfm": "net6.0",
     "frameworks": [
-      ***REMOVED***
+      {
         "name": "Microsoft.NETCore.App",
         "version": "6.0.0"
-  ***REMOVED***,
-      ***REMOVED***
+      },
+      {
         "name": "Microsoft.AspNetCore.App",
         "version": "6.0.0"
-  ***REMOVED***
+      }
     ],
-    "configProperties": ***REMOVED***
+    "configProperties": {
       "System.GC.Server": true,
       "System.Reflection.NullabilityInfoContext.IsSupported": true,
       "System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization": false
-***REMOVED***
-  ***REMOVED***
-***REMOVED***
+    }
+  }
+}

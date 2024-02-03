@@ -1,17 +1,17 @@
-***REMOVED***using ScoreManagementApi.Core.Dtos.Common;
+﻿using ScoreManagementApi.Core.Dtos.Common;
 using ScoreManagementApi.Core.Dtos.ComponentScoreDto.Response;
 
 namespace ScoreManagementApi.Core.Dtos.ComponentScoreDto
-***REMOVED***
+{
     public class SearchComponentScores : SearchList<ComponentScoreResponse>
-    ***REMOVED***
-        public string? Name ***REMOVED*** get; set; ***REMOVED***
-        public float? Percent ***REMOVED*** get; set; ***REMOVED***
-        public bool? Active ***REMOVED*** get; set; ***REMOVED***
-        public int? SubjectId ***REMOVED*** get; set; ***REMOVED***
+    {
+        public string? Name { get; set; }
+        public float? Percent { get; set; }
+        public bool? Active { get; set; }
+        public int? SubjectId { get; set; }
 
         public new void ValidateInput()
-        ***REMOVED***
+        {
             base.ValidateInput();
 
             if(!String.IsNullOrEmpty(Name))
@@ -20,6 +20,6 @@ namespace ScoreManagementApi.Core.Dtos.ComponentScoreDto
             if (Active == null)
                 Active = false;
 
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

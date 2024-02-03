@@ -1,12 +1,12 @@
-***REMOVED***
+{
   "format": 1,
-  "restore": ***REMOVED***
-    "E:\\c#_web_api\\PRN231\\ScoreManagementApi\\ScoreManagementApi.csproj": ***REMOVED******REMOVED***
-  ***REMOVED***,
-  "projects": ***REMOVED***
-    "E:\\c#_web_api\\PRN231\\ScoreManagementApi\\ScoreManagementApi.csproj": ***REMOVED***
+  "restore": {
+    "E:\\c#_web_api\\PRN231\\ScoreManagementApi\\ScoreManagementApi.csproj": {}
+  },
+  "projects": {
+    "E:\\c#_web_api\\PRN231\\ScoreManagementApi\\ScoreManagementApi.csproj": {
       "version": "1.0.0",
-      "restore": ***REMOVED***
+      "restore": {
         "projectUniqueName": "E:\\c#_web_api\\PRN231\\ScoreManagementApi\\ScoreManagementApi.csproj",
         "projectName": "ScoreManagementApi",
         "projectPath": "E:\\c#_web_api\\PRN231\\ScoreManagementApi\\ScoreManagementApi.csproj",
@@ -24,61 +24,61 @@
         "originalTargetFrameworks": [
           "net6.0"
         ],
-        "sources": ***REMOVED***
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": ***REMOVED******REMOVED***,
-          "https://api.nuget.org/v3/index.json": ***REMOVED******REMOVED***
-***REMOVED***,
-        "frameworks": ***REMOVED***
-          "net6.0": ***REMOVED***
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": ***REMOVED******REMOVED***
-  ***REMOVED***
-***REMOVED***,
-        "warningProperties": ***REMOVED***
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
           "warnAsError": [
             "NU1605"
           ]
-***REMOVED***
-  ***REMOVED***,
-      "frameworks": ***REMOVED***
-        "net6.0": ***REMOVED***
+        }
+      },
+      "frameworks": {
+        "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": ***REMOVED***
-            "EPPlus": ***REMOVED***
+          "dependencies": {
+            "EPPlus": {
               "target": "Package",
               "version": "[7.0.1, )"
-    ***REMOVED***,
-            "MailKit": ***REMOVED***
+            },
+            "MailKit": {
               "target": "Package",
               "version": "[4.2.0, )"
-    ***REMOVED***,
-            "Microsoft.AspNetCore.Authentication.JwtBearer": ***REMOVED***
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.10, )"
-    ***REMOVED***,
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": ***REMOVED***
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.10, )"
-    ***REMOVED***,
-            "Microsoft.EntityFrameworkCore.SqlServer": ***REMOVED***
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.10, )"
-    ***REMOVED***,
-            "Microsoft.EntityFrameworkCore.Tools": ***REMOVED***
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.10, )"
-    ***REMOVED***,
-            "NETCore.MailKit": ***REMOVED***
+            },
+            "NETCore.MailKit": {
               "target": "Package",
               "version": "[2.1.0, )"
-    ***REMOVED***,
-            "Swashbuckle.AspNetCore": ***REMOVED***
+            },
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
-    ***REMOVED***
-  ***REMOVED***,
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -90,17 +90,17 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": ***REMOVED***
-            "Microsoft.AspNetCore.App": ***REMOVED***
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
-    ***REMOVED***,
-            "Microsoft.NETCore.App": ***REMOVED***
+            },
+            "Microsoft.NETCore.App": {
               "privateAssets": "all"
-    ***REMOVED***
-  ***REMOVED***,
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
-***REMOVED***
-  ***REMOVED***
-***REMOVED***
-  ***REMOVED***
-***REMOVED***
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-***REMOVED***
+{
   "version": 2,
   "dgSpecHash": "eJHufEug/DVETWcJLVFDai914mBei1JApABpx0XJqM7WsFe50GToQlHZnDmzTvOtOGbpUCJAydAq2Izm/2GDqg==",
   "success": true,
@@ -80,4 +80,4 @@
     "C:\\Users\\84877\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": []
-***REMOVED***
+}

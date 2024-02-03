@@ -1,7 +1,7 @@
-***REMOVED***namespace ScoreManagementApi.Core.Dtos.User.Request
-***REMOVED***
+﻿namespace ScoreManagementApi.Core.Dtos.User.Request
+{
     public class ForgotPasswordRequest
-    ***REMOVED***
-        public string Email ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+    {
+        public string Email { get; set; }
+    }
+}

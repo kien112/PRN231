@@ -1,9 +1,9 @@
-***REMOVED***namespace ScoreManagementApi.Core.Dtos.User
-***REMOVED***
+﻿namespace ScoreManagementApi.Core.Dtos.User
+{
     public class UserTiny
-    ***REMOVED***
-        public string Id ***REMOVED*** get; set; ***REMOVED***
-        public string FullName ***REMOVED*** get; set; ***REMOVED***
-        public string Role ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+    {
+        public string Id { get; set; }
+        public string FullName { get; set; }
+        public string Role { get; set; }
+    }
+}

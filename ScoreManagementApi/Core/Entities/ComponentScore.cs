@@ -1,19 +1,19 @@
-***REMOVED***using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ScoreManagementApi.Core.Entities
-***REMOVED***
+{
     public class ComponentScore
-    ***REMOVED***
-        public int Id ***REMOVED*** get; set; ***REMOVED***
+    {
+        public int Id { get; set; }
         [MaxLength(150)]
-        public string Name ***REMOVED*** get; set; ***REMOVED***
-        public float Percent ***REMOVED*** get; set; ***REMOVED***
-        public bool Active ***REMOVED*** get; set; ***REMOVED***
+        public string Name { get; set; }
+        public float Percent { get; set; }
+        public bool Active { get; set; }
         [MaxLength(250)]
-        public string? Description ***REMOVED*** get; set; ***REMOVED***
+        public string? Description { get; set; }
         [ForeignKey("Subject")]
-        public int SubjectId ***REMOVED*** get; set; ***REMOVED***
-        public Subject Subject ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+        public int SubjectId { get; set; }
+        public Subject Subject { get; set; }
+    }
+}

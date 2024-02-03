@@ -1,8 +1,8 @@
-***REMOVED***namespace ScoreManagementApi.Core.Dtos.ScoreDto.Response
-***REMOVED***
+﻿namespace ScoreManagementApi.Core.Dtos.ScoreDto.Response
+{
     public class ExportScoreResponse
-    ***REMOVED***
-        public byte[] Bytes ***REMOVED*** get; set; ***REMOVED***
-        public string FileName ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+    {
+        public byte[] Bytes { get; set; }
+        public string FileName { get; set; }
+    }
+}

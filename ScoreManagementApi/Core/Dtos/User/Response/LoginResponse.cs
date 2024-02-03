@@ -1,8 +1,8 @@
-***REMOVED***namespace ScoreManagementApi.Core.Dtos.User.Response
-***REMOVED***
+﻿namespace ScoreManagementApi.Core.Dtos.User.Response
+{
     public class LoginResponse
-    ***REMOVED***
-        public string FullName ***REMOVED*** get; set; ***REMOVED***
-        public string Token ***REMOVED*** get; set; ***REMOVED***
-***REMOVED***
-***REMOVED***
+    {
+        public string FullName { get; set; }
+        public string Token { get; set; }
+    }
+}

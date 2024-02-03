@@ -1,28 +1,28 @@
-***REMOVED***using ScoreManagementApi.Core.Dtos.ClassRoomDto.Response;
+﻿using ScoreManagementApi.Core.Dtos.ClassRoomDto.Response;
 using ScoreManagementApi.Core.Dtos.Common;
 using ScoreManagementApi.Core.Dtos.SubjectDto;
 using ScoreManagementApi.Core.Dtos.User;
 
 namespace ScoreManagementApi.Core.Dtos.ClassRoomDto
-***REMOVED***
+{
     public class SearchClassRoom : SearchList<ClassResponse>
-    ***REMOVED***
-        public string? Name ***REMOVED*** get; set; ***REMOVED***
-        public string? TeacherId ***REMOVED*** get; set; ***REMOVED***
-        public string? TeacherName ***REMOVED*** get; set; ***REMOVED***
-        public int? SubjectId ***REMOVED*** get; set; ***REMOVED***
-        public string? SubjectName ***REMOVED*** get; set; ***REMOVED***
-        public bool? Active ***REMOVED*** get; set; ***REMOVED***
-        public bool? IsCurrentClass ***REMOVED*** get; set; ***REMOVED***
+    {
+        public string? Name { get; set; }
+        public string? TeacherId { get; set; }
+        public string? TeacherName { get; set; }
+        public int? SubjectId { get; set; }
+        public string? SubjectName { get; set; }
+        public bool? Active { get; set; }
+        public bool? IsCurrentClass { get; set; }
 
         public new void ValidateInput()
-        ***REMOVED***
+        {
             base.ValidateInput();
 
             if(!String.IsNullOrEmpty(Name))
-            ***REMOVED***
+            {
                 Name = Name.Trim().ToLower();
-    ***REMOVED***
+            }
 
             if(IsCurrentClass == null) 
                 IsCurrentClass = false;
@@ -32,7 +32,7 @@ namespace ScoreManagementApi.Core.Dtos.ClassRoomDto
 
             if(!String.IsNullOrEmpty(SubjectName))
                 SubjectName = SubjectName.Trim().ToLower();
-***REMOVED***
+        }
 
-***REMOVED***
-***REMOVED***
+    }
+}
