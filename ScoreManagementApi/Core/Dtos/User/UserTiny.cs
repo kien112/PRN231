@@ -1,4 +1,4 @@
-﻿namespace ScoreManagementApi.Dtos.User
+﻿namespace ScoreManagementApi.Core.Dtos.User
 {
     public class UserTiny
     {

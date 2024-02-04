@@ -1,7 +1,7 @@
 ﻿
-using ScoreManagementApi.Dtos.User;
+using ScoreManagementApi.Core.Dtos.User;
 
-namespace ScoreManagementApi.Dtos.ClassRoomDto.Response
+namespace ScoreManagementApi.Core.Dtos.ClassRoomDto.Response
 {
     public class ClassStudentResponse
     {

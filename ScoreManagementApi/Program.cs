@@ -7,6 +7,7 @@ using Microsoft.OpenApi.Models;
 using OfficeOpenXml;
 using ScoreManagementApi.Core.DbContext;
 using ScoreManagementApi.Core.Entities;
+using ScoreManagementApi.Services;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -50,7 +51,7 @@ builder.Services.AddCors(options =>
         builder =>
         {
             builder
-                .WithOrigins("http://127.0.0.1:5500", "http://localhost:5095")
+                .WithOrigins("http://127.0.0.1:5500", "https://localhost:7118")
                 .AllowAnyMethod()
                 .AllowAnyHeader()
                 .AllowCredentials()
@@ -108,6 +109,12 @@ builder.Services
         };
     });
 
+
+//add service
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ISubjectService, SubjectService>();
+builder.Services.AddScoped<IClassService , ClassService>();
+builder.Services.AddScoped<EmailServices>();
 
 var app = builder.Build();
 

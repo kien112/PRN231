@@ -106,7 +106,7 @@ namespace ScoreManagementApi.Services
 
             await _userManager.AddToRoleAsync(newUser, StaticUserRoles.STUDENT);
 
-            EmailServices emailServices = new EmailServices();
+            EmailServices emailServices = new EmailServices(_configuration);
             await emailServices.SendAsync(new EmailMessage
             {
                 To = newUser.Email,
@@ -507,7 +507,7 @@ namespace ScoreManagementApi.Services
             existUser.PasswordHash = new PasswordHasher<User>().HashPassword(existUser, newPassword);
             await _userManager.UpdateAsync(existUser);
 
-            EmailServices emailServices = new EmailServices();
+            EmailServices emailServices = new EmailServices(_configuration);
             await emailServices.SendAsync(new EmailMessage
             {
                 To = existUser.Email,

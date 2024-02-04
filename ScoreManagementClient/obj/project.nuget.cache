@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kX4rho6/oLHVfVDp0ZL1jcUzsi7g30zHCiFbKjjsxKeuspUCmDtX0A1bqOL1ffbW4LLyJqchHHSIhjPmKalBtg==",
+  "dgSpecHash": "mVomTpjqo3UGQDsEfQnSCwVjkR4WYdqlpbTf3w3m3sCuKZjiXIIUp7jFegrK+bkJMnTnE+7s2LPj21mDjyW7gw==",
   "success": true,
   "projectFilePath": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\ScoreManagementClient.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\84877\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
