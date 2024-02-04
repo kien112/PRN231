@@ -1,8 +1,7 @@
-﻿using ScoreManagementApi.Core.Dtos.User;
-using ScoreManagementApi.Core.Entities;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿
+using ScoreManagementApi.Dtos.User;
 
-namespace ScoreManagementApi.Core.Dtos.ClassRoomDto.Response
+namespace ScoreManagementApi.Dtos.ClassRoomDto.Response
 {
     public class ClassStudentResponse
     {
