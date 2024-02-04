@@ -1,4 +1,7 @@
+using ScoreManagementClient.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -19,6 +22,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.UseMiddleware<TokenCheckMiddleware>();
 
 app.MapControllerRoute(
     name: "default",
