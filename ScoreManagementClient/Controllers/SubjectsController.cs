@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using ScoreManagementClient.Dtos.Common;
 using ScoreManagementClient.Dtos.SubjectDto;
 using System.Net.Http.Headers;
 using System.Text;
@@ -27,14 +28,22 @@ namespace ScoreManagementClient.Controllers
 
             if(httpResponse.IsSuccessStatusCode)
             {
-
+                string jsonResponse = await httpResponse.Content.ReadAsStringAsync();
+                var response  = JsonConvert.DeserializeObject<ResponseData<SearchSubject>>(jsonResponse);
+                if(response != null && response.StatusCode == 200)
+                {
+                    return View(response);
+                }
+                else
+                {
+                    return View();
+                }
             }
             else
             {
-
+                return View();
             }
-
-            return View();
+            
         }
     }
 }
