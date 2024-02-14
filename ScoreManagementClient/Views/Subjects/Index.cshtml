@@ -3,25 +3,66 @@
 @model ResponseData<SearchSubject>
 
 @{
+    int numberOfPage = 1;
+    if (ViewBag.NumberOfPage != null)
+        numberOfPage = ViewBag.NumberOfPage;
 }
 
 <div class="">
     <div class="bg-secondary rounded h-100 p-4">
         <h6 class="mb-4">Subjects</h6>
+        <div class="row">
+            <div class="col-md-3">
+                <a href="/subjects/create" class="btn btn-primary m-2">Create</a>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating mb-3">
+                    <input type="text" value="@Model?.Data?.Name" class="form-control" id="SubjectName"
+                        placeholder="enter subject name">
+                    <label for="floatingInput">Subject Name</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="IsCurrentSubject"
+                                aria-label="Select Item">
+                                <option value="0">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                            <label for="floatingSelect">Is Current Subjects</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="Active"
+                                aria-label="Select Item">
+                                <option value="-1">All</option>
+                                <option value="1">Active</option>
+                                <option value="0">InActive</option>
+                            </select>
+                            <label for="floatingSelect">Select Status</label>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
         <div class="table-responsive">
             <table class="table">
                 <thead>
-                    <tr>
-                        <th scope="col">ID</th>
-                        <th scope="col">Subject Name</th>
+                    <tr id="sortableTable">
+                        <th id="Id" scope="col">ID</th>
+                        <th id="Name" scope="col">Subject Name</th>
                         <th scope="col">Description</th>
-                        <th scope="col">Active</th>
-                        <th scope="col">CreatedAt</th>
+                        <th id="Active" scope="col">Active</th>
+                        <th id="CreatedAt" scope="col">Created At</th>
                         <th scope="col">Creator</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="data">
                     @foreach (var item in Model?.Data?.Result)
                     {
                         <tr>
@@ -32,15 +73,42 @@
                             <td>@item.CreatedAt</td>
                             <td>@item.Creator?.FullName</td>
                             <td>
-                                <button type="button" class="btn btn-warning m-2">Edit</button>
-                                <button type="button" class="btn btn-danger m-2">Delete</button>
+                                <a asp-action="update" asp-route-id="@item.Id" class="btn btn-warning m-2">Edit</a>
                             </td>
                         </tr>
                     }
                     
                 </tbody>
             </table>
+            <div class="row w-75">
+                <div class="col-md-3">
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="PageSize"
+                            aria-label="Select Item">
+                            <option value="2">2</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                        </select>
+                        <label for="floatingSelect">Page Size</label>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                   <div class="form-floating mb-3">
+                        <select class="form-select" id="PageIndex"
+                            aria-label="Select Item">
+                            @for (int i = 0; i < numberOfPage; i++)
+                            {
+                                <option value="@(i)">@(i+1)</option>
+                            }
+                        </select>
+                        <label for="floatingSelect">Page Index</label>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="/assets/js/subject/index.js"></script>

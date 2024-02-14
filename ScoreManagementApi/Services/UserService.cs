@@ -74,7 +74,7 @@ namespace ScoreManagementApi.Services
                 return new ResponseData<UserResponse>
                 {
                     StatusCode = 400,
-                    Erorrs = erorrs
+                    Errors = erorrs
                 };
 
             //create user and add role
@@ -195,7 +195,8 @@ namespace ScoreManagementApi.Services
                 Data = new LoginResponse
                 {
                     FullName = user.FullName,
-                    Token = token
+                    Token = token,
+                    Role = userRoles[0]
                 },
                 StatusCode = 200
             };
@@ -221,7 +222,7 @@ namespace ScoreManagementApi.Services
                 return new ResponseData<UserResponse>
                 {
                     StatusCode = 400,
-                    Erorrs = erorrs
+                    Errors = erorrs
                 };
             }
 

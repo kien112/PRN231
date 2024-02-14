@@ -5,7 +5,7 @@
         public T Data { get; set; }
         public string Message { get; set; }
         public int StatusCode { get; set; }
-        public List<ErrorMessage> Erorrs { get; set; }
+        public List<ErrorMessage> Errors { get; set; }
     }
 
     public class ErrorMessage

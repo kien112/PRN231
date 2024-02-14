@@ -25,8 +25,24 @@
       "PackagePath": "staticwebassets\\assets\\img\\user.jpg"
     },
     {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\common.js",
+      "PackagePath": "staticwebassets\\assets\\js\\common.js"
+    },
+    {
       "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\main.js",
       "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\subject\\create-subject.js",
+      "PackagePath": "staticwebassets\\assets\\js\\subject\\create-subject.js"
+    },
+    {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\subject\\index.js",
+      "PackagePath": "staticwebassets\\assets\\js\\subject\\index.js"
+    },
+    {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\subject\\update-subject.js",
+      "PackagePath": "staticwebassets\\assets\\js\\subject\\update-subject.js"
     },
     {
       "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\lib\\chart\\chart.min.js",

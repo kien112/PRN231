@@ -46,7 +46,7 @@ namespace ScoreManagementApi.Services
                 return new ResponseData<ClassResponse>
                 {
                     StatusCode = 400,
-                    Erorrs = errors
+                    Errors = errors
                 };
             }
 
@@ -324,7 +324,7 @@ namespace ScoreManagementApi.Services
                 return new ResponseData<ClassResponse>
                 {
                     StatusCode = 400,
-                    Erorrs = errors
+                    Errors = errors
                 };
             }
 

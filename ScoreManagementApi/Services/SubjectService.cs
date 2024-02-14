@@ -39,7 +39,7 @@ namespace ScoreManagementApi.Services
             {
                 return new ResponseData<SubjectResponse>
                 {
-                    Erorrs = errors,
+                    Errors = errors,
                     StatusCode = 400
                 };
             }
@@ -237,6 +237,7 @@ namespace ScoreManagementApi.Services
                     Id = item.Id,
                     Name = item.Name,
                     Description = item.Description,
+                    Active = item.Active,
                     CreatedAt = item.CreatedAt,
                     Creator = creator,
                     ComponentScores = componentScoreResponses
@@ -283,7 +284,7 @@ namespace ScoreManagementApi.Services
             {
                 return new ResponseData<SubjectResponse>
                 {
-                    Erorrs = errors,
+                    Errors = errors,
                     StatusCode = 400
                 };
             }

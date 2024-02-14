@@ -1,0 +1,41 @@
+﻿@using ScoreManagementClient.Dtos.Common;
+@using ScoreManagementClient.Dtos.SubjectDto;
+@using ScoreManagementClient.Dtos.SubjectDto.Response;
+
+@model ResponseData<SubjectResponse>
+
+@{
+}
+<div class="col-sm-12 col-xl-6">
+    <div class="bg-secondary rounded h-100 p-4">
+        <h6 class="mb-4">Update Subject</h6>
+        <input id="SubjectId" value="@Model?.Data?.Id" hidden="hidden"/>
+        <div class="form-floating mb-3">
+            <input type="text" value="@Model?.Data?.Name" class="form-control" id="SubjectName"
+                placeholder="enter subject name">
+            <label for="floatingInput">Subject Name</label>
+            <p id="NameError" class="text-danger"></p>
+        </div>
+        <div class="form-floating mb-3">
+            <select class="form-select" id="Active"
+                aria-label="Select Item">
+                <option selected="@Model?.Data?.Active" value="1">Active</option>
+                <option selected="@(!Model?.Data?.Active)" value="0">InActive</option>
+            </select>
+            <label for="floatingSelect">Select Status</label>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Description"
+                id="Description" style="height: 150px;">@Model?.Data?.Description</textarea>
+            <label for="floatingTextarea">Description</label>
+            <p id="DescriptionError" class="text-danger mt-2"></p>
+        </div>
+
+        <div class="form-floating">
+            <button id="btnUpdate" class="btn btn-primary" >Update</button>
+            <a class="btn btn-outline-primary" href="/subjects">Back</a>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="/assets/js/subject/update-subject.js"></script>
