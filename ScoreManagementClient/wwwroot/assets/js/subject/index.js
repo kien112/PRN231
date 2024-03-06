@@ -123,7 +123,10 @@ function LoadPageIndex() {
     numberOfPage = Math.floor(numberOfPage);
 
     for (var i = 0; i < numberOfPage; i++) {
-        $('#PageIndex').append('<option value="' + (i) + '" > ' + (i + 1) + ' </option>');
+        if (i === pageIndex)
+            $('#PageIndex').append('<option value="' + (i) + '" selected="selected"> ' + (i + 1) + ' </option>');
+        else
+            $('#PageIndex').append('<option value="' + (i) + '" > ' + (i + 1) + ' </option>');
     }
 }
 
