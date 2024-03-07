@@ -1,6 +1,7 @@
 ﻿var apiUrl = 'https://localhost:7068/api/subject';
 var subjectName = '', active = null, pageIndex = null, isCurrentSubject = null,
     pageSize = 2, totalElement = 0, sortBy = 'Id', orderBy = 'ASC';
+var up = '&#8593;', down = '&#8595;';
 
 
 
@@ -9,6 +10,8 @@ $(document).ready(function () {
     $('#sortableTable th').click(function () {
         var columnName = $(this).attr('id');
         console.log(columnName)
+        $('.up-down-arrow').html(up + ' ' + down);
+        $('.up-down-arrow').removeClass('text-danger');
         if (columnName !== undefined) {
             if (columnName !== sortBy) {
                 orderBy = 'ASC';
@@ -16,6 +19,9 @@ $(document).ready(function () {
             } else {
                 orderBy = orderBy === 'ASC' ? 'DESC' : 'ASC';
             }
+            var selectedField = $(this).find('span');
+            selectedField.html(orderBy === 'ASC' ? up : down);
+            selectedField.addClass('text-danger');
 
             SearchSubject();
         }
@@ -128,56 +134,4 @@ function LoadPageIndex() {
         else
             $('#PageIndex').append('<option value="' + (i) + '" > ' + (i + 1) + ' </option>');
     }
-}
-
-function loadPagination() {
-    $('#pagination').empty();
-    var numberOfPage = totalElement % pageSize == 0
-        ? totalElement / pageSize : 1 + totalElement / pageSize;
-    numberOfPage = Math.floor(numberOfPage);
-
-    var $btnPrevious = $('<input type="radio" class="btn-check" name="btnradio" value="-1" id="btnradio1" autocomplete="off" ' + (pageIndex == 0 ? "disabled" : "") + '>');
-    var $labelPrevious = $('<label class="btn btn-outline-primary" for="btnradio1">&laquo;</label>');
-
-    $("#pagination").append($btnPrevious).append($labelPrevious);
-
-    if (numberOfPage <= 5) {
-        for (var i = 1; i <= numberOfPage; i++) {
-            var $btnPage = $('<input type="radio" class="btn-check" name="btnradio" id="btnradio' + (i + 1) + '" value="' + i + '" autocomplete="off">');
-            var $labelPage = $('<label class="btn btn-outline-primary" for="btnradio' + (i + 1) + '">' + i + '</label>');
-
-            $("#pagination").append($btnPage).append($labelPage);
-        }
-    } else {
-        var $btnFirstPage = $('<input type="radio" class="btn-check" name="btnradio" value="' + (pageIndex + 1)
-                + '" id="btnradio2" autocomplete="off" ' + (pageIndex == 0 ? "checked" : "") + '>');
-        var $labelFirstPage = $('<label class="btn btn-outline-primary" for="btnradio2">' + (pageIndex + 1) +'</label>');
-        $("#pagination").append($btnFirstPage).append($labelFirstPage);
-
-        var $btnSecondPage = $('<input type="radio" class="btn-check" name="btnradio" value="' + (pageIndex + 2) + '" id="btnradio3" autocomplete="off" >');
-        var $labelSecondPage = $('<label class="btn btn-outline-primary" for="btnradio3">' + (pageIndex + 2) + '</label>');
-        $("#pagination").append($btnSecondPage).append($labelSecondPage);
-
-        var $btnDots = $('<input type="radio" class="btn-check" name="btnradio" disabled id="btnradio4" autocomplete="off">');
-        var $labelDots = $('<label class="btn btn-outline-primary" for="btnradio4">...</label>');
-        $("#pagination").append($btnDots).append($labelDots);
-
-        for (var i = numberOfPage - 1; i <= numberOfPage; i++) {
-            var $btnPage = $('<input type="radio" class="btn-check" name="btnradio" id="btnradio' + (i + 1) + '" value="' + i + '" autocomplete="off">');
-            var $labelPage = $('<label class="btn btn-outline-primary" for="btnradio' + (i + 1) + '">' + i + '</label>');
-
-            $("#pagination").append($btnPage).append($labelPage);
-        }
-    }
-
-    var $btnNext = $('<input type="radio" class="btn-check" value="-2" name="btnradio" id="btnradio' + (numberOfPage + 2) + '" autocomplete="off">');
-    var $labelNext = $('<label class="btn btn-outline-primary" for="btnradio' + (numberOfPage + 2) + '">&raquo;</label>');
-
-    $("#pagination").append($btnNext).append($labelNext);
-    $('.btn-check').click(function () {
-        var page = $(this).val();
-        pageIndex = page - 1;
-        SearchSubject();
-        console.log(page);
-    });
 }

@@ -63,5 +63,13 @@ namespace ScoreManagementClient.Controllers
             }
 
         }
+
+        [HttpGet("Logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.Response.Cookies.Delete("Token");
+            HttpContext.Response.Cookies.Delete("UserInfo");
+            return Redirect("/home");
+        }
     }
 }

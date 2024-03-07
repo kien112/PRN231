@@ -45,12 +45,12 @@ namespace ScoreManagementClient.Controllers
                 }
                 else
                 {
-                    return View();
+                    return Redirect("/home");
                 }
             }
             else
             {
-                return View();
+                return Redirect("/home");
             }
             
         }

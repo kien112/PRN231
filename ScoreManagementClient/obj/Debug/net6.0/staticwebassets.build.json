@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Q+BBsvN3B9da14l0c9cXWEPq+5sDl6boAOA9wdO+Src=",
+  "Hash": "b04YjV0Gx/wMlA1F9qcSPsPC4qWXAOnebvLREmqZEDQ=",
   "Source": "ScoreManagementClient",
   "BasePath": "_content/ScoreManagementClient",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\user.jpg"
+    },
+    {
+      "Identity": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\classroom\\index.js",
+      "SourceId": "ScoreManagementClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\",
+      "BasePath": "_content/ScoreManagementClient",
+      "RelativePath": "assets/js/classroom/index.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\classroom\\index.js"
     },
     {
       "Identity": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\common.js",
