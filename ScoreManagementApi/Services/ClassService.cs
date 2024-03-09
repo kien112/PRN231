@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Asn1.Ocsp;
 using ScoreManagementApi.Core.DbContext;
 using ScoreManagementApi.Core.Dtos.ClassRoomDto;
 using ScoreManagementApi.Core.Dtos.ClassRoomDto.Request;
@@ -10,6 +11,7 @@ using ScoreManagementApi.Core.Dtos.User;
 using ScoreManagementApi.Core.Entities;
 using ScoreManagementApi.Core.OtherObjects;
 using ScoreManagementApi.Utils;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace ScoreManagementApi.Services
@@ -494,5 +496,48 @@ namespace ScoreManagementApi.Services
             };
         }
 
+        public async Task<ResponseData<List<UserTiny>>> GetRemainStudents(UserTiny? user, int classId)
+        {
+            if (user == null)
+                return new ResponseData<List<UserTiny>>
+                {
+                    Message = "UnAuth",
+                    StatusCode = 401,
+                };
+
+            var existClass = _context.ClassRooms
+                .SingleOrDefault(x => x.Id == classId);
+
+            if (existClass == null)
+                return new ResponseData<List<UserTiny>>
+                {
+                    Message = "Class Not Found",
+                    StatusCode = 404
+                };
+
+            var classStudentIdInSubject = _context.ClassRooms
+                .Include(x => x.ClassStudents)
+                .Where(x => x.SubjectId == existClass.SubjectId)
+                .SelectMany(x => x.ClassStudents)
+                .ToList();
+
+            var studentIds = classStudentIdInSubject.Select(x => x.StudentId).ToList();
+
+            var students = await _userManager.GetUsersInRoleAsync(StaticUserRoles.STUDENT);
+
+            var response = students.Where(x => !studentIds.Contains(x.Id))
+                .Select(x => new UserTiny
+                {
+                    Id = x.Id,
+                    FullName = x.FullName
+                })                
+                .ToList();
+
+            return new ResponseData<List<UserTiny>>
+            {
+                Data = response,
+                StatusCode = 200
+            };
+        }
     }
 }

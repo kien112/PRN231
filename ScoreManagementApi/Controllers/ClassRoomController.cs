@@ -6,6 +6,7 @@ using ScoreManagementApi.Core.Dtos.ClassRoomDto;
 using ScoreManagementApi.Core.Dtos.ClassRoomDto.Request;
 using ScoreManagementApi.Core.Dtos.ClassRoomDto.Response;
 using ScoreManagementApi.Core.Dtos.Common;
+using ScoreManagementApi.Core.Dtos.User;
 using ScoreManagementApi.Core.OtherObjects;
 using ScoreManagementApi.Services;
 using ScoreManagementApi.Utils;
@@ -58,6 +59,16 @@ namespace ScoreManagementApi.Controllers
         {
             return await _classService.GetClassRoomById(JWTUtil
                 .GetUserFromToken(_configuration, _context, Authorization), id);
+        }
+
+        [HttpGet]
+        [Route("get-remain-students/{classId}")]
+        [Authorize(Roles = StaticUserRoles.ADMIN)]
+        public async Task<ResponseData<List<UserTiny>>> GetRemainStudents([FromHeader] string Authorization,
+            int classId)
+        {
+            return await _classService.GetRemainStudents(JWTUtil
+                .GetUserFromToken(_configuration, _context, Authorization), classId);
         }
 
         [HttpPost]

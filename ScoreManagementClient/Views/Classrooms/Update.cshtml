@@ -1,0 +1,42 @@
+﻿
+<div class="col-sm-12 col-xl-6">
+    <div class="bg-secondary rounded h-100 p-4">
+        <h6 class="mb-4">Update Class</h6>
+        <input id="Id" value="@ViewBag.Id" hidden />
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="ClassName"
+                placeholder="enter class name">
+            <label for="ClassName">Class Name</label>
+            <p id="NameError" class="text-danger"></p>
+        </div>
+        <div class="form-floating mb-3">
+            <select class="form-select" id="TeacherId"
+                aria-label="Select Item">
+            </select>
+            <label for="TeacherId">Teacher</label>
+        </div>
+        <p class="text-warning">*students in class will be removed if subject is changed!</p>
+        <div class="form-floating">
+            <select class="form-select" id="SubjectId"
+                aria-label="Select Item">
+            </select>
+            <label for="SubjectId">Subject</label>
+            <p id="SubjectIdError" class="text-danger mt-2"></p>
+        </div>
+        <div class="form-floating mb-3">
+            <select class="form-select" id="Active"
+                aria-label="Select Item">
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+            <label for="Active">Active</label>
+        </div>
+        <div class="form-floating">
+            <button id="btnUpdate" class="btn btn-primary" type="submit">Update</button>
+            <a class="btn btn-outline-primary" href="/classrooms">Back</a>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/assets/js/classroom/update-class.js"></script>

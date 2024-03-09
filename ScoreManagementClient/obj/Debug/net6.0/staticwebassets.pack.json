@@ -25,8 +25,20 @@
       "PackagePath": "staticwebassets\\assets\\img\\user.jpg"
     },
     {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\classroom\\create-class.js",
+      "PackagePath": "staticwebassets\\assets\\js\\classroom\\create-class.js"
+    },
+    {
       "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\classroom\\index.js",
       "PackagePath": "staticwebassets\\assets\\js\\classroom\\index.js"
+    },
+    {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\classroom\\students.js",
+      "PackagePath": "staticwebassets\\assets\\js\\classroom\\students.js"
+    },
+    {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\classroom\\update-class.js",
+      "PackagePath": "staticwebassets\\assets\\js\\classroom\\update-class.js"
     },
     {
       "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\common.js",

@@ -50,5 +50,22 @@ namespace ScoreManagementClient.Controllers
             }
 
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        public IActionResult Update(int id)
+        {
+            ViewBag.Id = id;
+            return View();
+        }
+
+        public IActionResult Students(int id)
+        {
+            ViewBag.Id = id;
+            return View();
+        }
     }
 }

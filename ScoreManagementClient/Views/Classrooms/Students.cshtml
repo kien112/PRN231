@@ -1,0 +1,38 @@
+﻿<style>
+    .limited-width {
+        max-width: 50px; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
+        white-space: nowrap;
+    }
+</style>
+
+<div class="col-sm-12 col-xl-6">
+    <div class="bg-secondary rounded h-100 p-4">
+        <h6 class="mb-4">Students in Class <span id="ClassName"></span></h6>
+        <input id="Id" value="@ViewBag.Id" hidden />
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="StudentName"
+                placeholder="enter student name">
+            <label for="StudentName">Student Name</label>
+        </div>
+        <button id="btnSave" class="btn btn-primary">Save Changes</button>
+        <a class="btn btn-outline-primary" href="/classrooms">Back</a>
+        <table class="table" style="width: 1000px;">
+                <thead>
+                    <tr id="sortableTable">
+                        <th id="Id" scope="col"></th>
+                        <th id="StudentId" scope="col" style="width: 400px">Student ID</th>
+                        <th id="Name" scope="col" style="width: 400px">Full Name</th>
+                        <th scope="col" style="width: 300px">Join Date</th>
+                    </tr>
+                </thead>
+                <tbody class="overflow-y" id="data">
+                    
+                </tbody>
+            </table>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/assets/js/classroom/students.js"></script>

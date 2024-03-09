@@ -127,7 +127,8 @@ function displayData(data) {
         row += '<td>' + item.createdAt + '</td>';
         row += '<td>' + item.creator.fullName + '</td>';
         row += '<td>' + item.subject.name + '</td>';
-        row += '<td><a href="/subjects/update/' + item.id + '" class="btn btn-warning m-2">Edit</a></td>';
+        row += '<td><a href="/classrooms/update/' + item.id + '" class="btn btn-warning m-2">Edit</a>';
+        row += '<a href="/classrooms/students/' + item.id + '" class="btn btn-warning m-2">List Students</a></td>';
         row += '</tr>';
         $('#data').append(row);
     });
