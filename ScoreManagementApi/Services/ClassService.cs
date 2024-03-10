@@ -329,7 +329,6 @@ namespace ScoreManagementApi.Services
                     Errors = errors
                 };
             }
-
             var isExistClass = await _context.ClassRooms.FindAsync(request.Id);
 
             if (isExistClass == null)

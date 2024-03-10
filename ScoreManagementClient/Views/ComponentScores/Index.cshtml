@@ -1,0 +1,123 @@
+﻿@using ScoreManagementClient.Dtos.Common;
+@using ScoreManagementClient.Dtos.ComponentScoreDto;
+@model ResponseData<SearchComponentScores>
+
+@{
+    int numberOfPage = 1;
+    if (ViewBag.NumberOfPage != null)
+    numberOfPage = ViewBag.NumberOfPage;
+}
+
+<div class="">
+    <div class="bg-secondary rounded h-100 p-4">
+        <h6 class="mb-4">Component Scores</h6>
+        <div class="row">
+            <div class="col-md-3">
+                <a href="/componentscores/create" class="btn btn-primary m-2">Create</a>
+            </div>
+            <div class="col-md-6">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="ComponentName"
+                                placeholder="enter component name">
+                            <label for="ComponentName">Component Name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <select class="form-select" id="SubjectId"
+                                aria-label="Select Item">
+                            </select>
+                            <label for="SubjectId">Subject</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                         <div class="form-floating">
+                            <input type="number" min="0" max="100" class="form-control" id="Percent"
+                                placeholder="enter percent">
+                            <label for="Percent">Percent</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <select class="form-select" id="Active"
+                                aria-label="Select Item">
+                                <option value="-1">All</option>
+                                <option value="1">Active</option>
+                                <option value="0">InActive</option>
+                            </select>
+                            <label for="floatingSelect">Select Status</label>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr id="sortableTable">
+                        <th id="Id" scope="col">ID <span class="up-down-arrow text-danger">&#8593;</span></th>
+                        <th id="Name" scope="col">Component Name <span class="up-down-arrow">&#8593; &#8595;</span></th>
+                        <th id="Percent" scope="col">Percent <span class="up-down-arrow">&#8593; &#8595;</span></th>
+                        <th id="Active" scope="col">Active <span class="up-down-arrow">&#8593; &#8595;</span></th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Subject</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+                    @foreach (var item in Model?.Data?.Result)
+                    {
+                        <tr>
+                            <th scope="row">@item.Id</th>
+                            <td>@item.Name</td>
+                            <td>@item.Percent %</td>
+                            <td>@item.Active</td>
+                            <td>@item.Description</td>
+                            <td>@item.Subject?.Name</td>
+                            <td>
+                                <a asp-action="update" asp-route-id="@item.Id" class="btn btn-warning m-2">Edit</a>
+                            </td>
+                        </tr>
+                    }
+                    
+                </tbody>
+            </table>
+            <div class="row w-75">
+                <div class="col-md-3">
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="PageSize"
+                            aria-label="Select Item">
+                            <option value="2">2</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                        </select>
+                        <label for="floatingSelect">Page Size</label>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                   <div class="form-floating mb-3">
+                        <select class="form-select" id="PageIndex"
+                            aria-label="Select Item">
+                            @for (int i = 0; i < numberOfPage; i++)
+                            {
+                                <option value="@(i)">@(i+1)</option>
+                            }
+                        </select>
+                        <label for="floatingSelect">Page Index</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="/assets/js/component-score/index.js"></script>

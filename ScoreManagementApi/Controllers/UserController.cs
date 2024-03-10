@@ -18,8 +18,7 @@ namespace ScoreManagementApi.Controllers
             _userService = userService;
         }
 
-        [HttpPost]
-        [Route("get-by-id")]
+        [HttpGet("get-by-id/{Id}")]
         public async Task<ResponseData<UserResponse>> GetUserById(string Id)
         {
             return await _userService.GetUserById(Id);

@@ -16,10 +16,6 @@ namespace ScoreManagementApi.Core.Dtos.ComponentScoreDto
 
             if(!String.IsNullOrEmpty(Name))
                 Name = Name.Trim().ToLower();
-            
-            if (Active == null)
-                Active = false;
-
         }
     }
 }

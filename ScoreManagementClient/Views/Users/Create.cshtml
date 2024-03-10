@@ -1,0 +1,43 @@
+﻿<div class="col-sm-12 col-xl-6">
+    <div class="bg-secondary rounded h-100 p-4">
+        <h6 class="mb-4">Create User</h6>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="FullName"
+                placeholder="enter full name">
+            <label for="FullName">Full Name</label>
+            <p id="NameError" class="text-danger"></p>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="Email"
+                placeholder="enter email">
+            <label for="Email">Email</label>
+            <p id="EmailError" class="text-danger"></p>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="Username"
+                placeholder="enter Username">
+            <label for="Username">Username</label>
+            <p id="UsernameError" class="text-danger"></p>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" id="Password"
+                placeholder="enter password">
+            <label for="Password">Password</label>
+            <p id="PasswordError" class="text-danger"></p>
+        </div>
+        <div class="form-floating mb-3">
+            <select class="form-select" id="Gender"
+                aria-label="Select Item">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <label for="Gender">Gender</label>
+        </div>
+        <div class="form-floating">
+            <button id="btnCreate" class="btn btn-primary" type="submit">Create</button>
+            <a class="btn btn-outline-primary" href="/users">Back</a>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="/assets/js/user/create-user.js"></script>

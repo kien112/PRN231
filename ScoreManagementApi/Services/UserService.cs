@@ -36,7 +36,7 @@ namespace ScoreManagementApi.Services
 
         public async Task<ResponseData<UserResponse>> CreateUser(CreateUserRequest request)
         {
-            List<ErrorMessage> erorrs = new List<ErrorMessage>();
+            List<ErrorMessage> erorrs = request.ValidateInput(false);
            
             //check user exist by email or username
             var isExistsUser = await _userManager.FindByNameAsync(request.UserName);
@@ -85,7 +85,7 @@ namespace ScoreManagementApi.Services
                 SecurityStamp = Guid.NewGuid().ToString(),
                 Active = true,
                 FullName = request.FullName,
-                Gender = request.Gender,
+                Gender = (bool)request.Gender,
             };
 
             var createUserResult = await _userManager.CreateAsync(newUser, request.Password);
@@ -228,9 +228,9 @@ namespace ScoreManagementApi.Services
 
             isExistsUser.Email = request.Email;
             isExistsUser.UserName = request.UserName;
-            isExistsUser.Active = request.Active;
+            isExistsUser.Active = (bool)request.Active;
             isExistsUser.FullName = request.FullName;
-            isExistsUser.Gender = request.Gender;
+            isExistsUser.Gender = (bool)request.Gender;
 
             if (request.Password != null)
             {
@@ -253,6 +253,17 @@ namespace ScoreManagementApi.Services
                 };
             }
 
+            EmailServices emailServices = new EmailServices(_configuration);
+            await emailServices.SendAsync(new EmailMessage
+            {
+                To = isExistsUser.Email,
+                Subject = "Update Account",
+                Content = "Your Update Account in Score Management System is:\n" +
+                $"Email: {isExistsUser.Email}\n" +
+                $"Username: {isExistsUser.UserName}\n" +
+                (request.Password != null ? $"Password: {request.Password}" : "Password Not Change!")
+            });
+
             return new ResponseData<UserResponse>
             {
                 Message = "Ok",
@@ -273,7 +284,11 @@ namespace ScoreManagementApi.Services
 
         private async Task<List<ErrorMessage>> ValidateUpdateUser(UpdateUserRequest request, User isExistsUser)
         {
-            List<ErrorMessage> erorrs = new List<ErrorMessage>();
+            List<ErrorMessage> erorrs = request.ValidateInput(true);
+
+            if(erorrs != null && erorrs.Count > 0)
+                return erorrs;
+
             var isExistUserByUsernameOrEmail = await _userManager.FindByNameAsync(request.UserName);
             if (isExistUserByUsernameOrEmail != null
                 && !isExistsUser.Id.Equals(isExistUserByUsernameOrEmail.Id))
@@ -304,16 +319,6 @@ namespace ScoreManagementApi.Services
                         Key = "Email",
                         Message = "Email is existed!"
                     });
-            }
-
-            if (request.Password != null
-                && (String.IsNullOrEmpty(request.Password) || request.Password.Length < 6))
-            {
-                erorrs.Add(new ErrorMessage
-                {
-                    Key = "Password",
-                    Message = "Length of Password must be 6 characters or more!"
-                });
             }
 
             return erorrs;

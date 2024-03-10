@@ -233,7 +233,7 @@ namespace ScoreManagementApi.Services
                     (request.Name == null || c.Name.ToLower().Contains(request.Name))
                     && (request.Percent == null || c.Percent <= request.Percent)
                     && (request.SubjectId == null || c.SubjectId == request.SubjectId)
-                    && (request.Active == request.Active)
+                    && (request.Active == null || c.Active == request.Active)
                 );
 
             Expression<Func<ComponentScore, object>> keySelector = OrderByHelper.GetKeySelector<ComponentScore>(request.SortBy);

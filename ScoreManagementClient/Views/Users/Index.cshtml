@@ -1,0 +1,118 @@
+﻿@using ScoreManagementClient.Dtos.Common;
+@using ScoreManagementClient.Dtos.User;
+@using ScoreManagementClient.Dtos.User.Response;
+@model ResponseData<SearchList<UserResponse>>;
+
+    @{
+    int numberOfPage = 1;
+    if (ViewBag.NumberOfPage != null)
+        numberOfPage = ViewBag.NumberOfPage;
+}
+
+<div class="bg-secondary rounded p-4">
+    <h6 class="mb-4">Users</h6>
+    <div class="row">
+        <div class="col-md-3">
+            <a href="/users/create" class="btn btn-primary m-2">Create</a>
+        </div>
+        <div class="col-md-6">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="Keyword"
+                    placeholder="enter full name">
+                <label for="Keyword">Full Name or Email</label>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="Role"
+                            aria-label="Select Item">
+                            <option value="All">All</option>
+                            <option value="ADMIN">ADMIN</option>
+                            <option value="TEACHER">TEACHER</option>
+                            <option value="STUDENT">STUDENT</option>
+                        </select>
+                        <label for="Role">Role</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="Gender"
+                            aria-label="Select Item">
+                            <option value="All">All</option>
+                            <option value="MALE">Male</option>
+                            <option value="FEMALE">Female</option>
+                        </select>
+                        <label for="Gender">Select Gender</label>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+            
+    </div>
+        
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr id="sortableTable">
+                    <th id="Id" scope="col">ID <span class="up-down-arrow text-danger">&#8593;</span></th>
+                    <th id="Name" scope="col">Full Name <span class="up-down-arrow">&#8593; &#8595;</span></th>
+                    <th id="Email" scope="col">Email <span class="up-down-arrow">&#8593; &#8595;</span></th>
+                    <th id="Gender" scope="col">Gender <span class="up-down-arrow">&#8593; &#8595;</span></th>
+                    <th id="Active" scope="col">Active <span class="up-down-arrow">&#8593; &#8595;</span></th>
+                    <th id="Role" scope="col">Role</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+                @foreach (var item in Model?.Data?.Result)
+                {
+                    <tr id="@("row-" + item.Id)">
+                        <th scope="row">@item.Id.Substring(0, 8)</th>
+                        <td>@item.FullName</td>
+                        <td>@item.Email</td>
+                        <td>@(item.Gender ? "Male" : "Female")</td>
+                        <td>@item.Active</td>
+                        <td  class="user-role">@item.Roles[0]</td>
+                        <td>
+                            <a asp-action="update" asp-route-id="@item.Id" class="btn btn-warning m-2">Edit</a>
+                            <a onclick="showAlert('@item.Id')" class="btn btn-warning m-2">Change Role</a>
+                        </td>
+                    </tr>
+                }
+                    
+            </tbody>
+        </table>
+        <div class="row w-75">
+            <div class="col-md-3">
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="PageSize"
+                        aria-label="Select Item">
+                        <option value="2">2</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                    </select>
+                    <label for="floatingSelect">Page Size</label>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4">
+                <div class="form-floating mb-3">
+                    <select class="form-select" id="PageIndex"
+                        aria-label="Select Item">
+                        @for (int i = 0; i < numberOfPage; i++)
+                        {
+                            <option value="@(i)">@(i+1)</option>
+                        }
+                    </select>
+                    <label for="floatingSelect">Page Index</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/assets/js/user/index.js"></script>
+

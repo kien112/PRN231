@@ -36,7 +36,6 @@ namespace ScoreManagementApi.Services
             using (var client = new SmtpClient())
             {
                 await client.ConnectAsync(_emailConfiguration.SmtpServer, 465, SecureSocketOptions.SslOnConnect);
-                await client.AuthenticateAsync(_emailConfiguration.SmtpUsername, _emailConfiguration.SmtpPassword);
 
                 await client.SendAsync(message);
                 await client.DisconnectAsync(true);

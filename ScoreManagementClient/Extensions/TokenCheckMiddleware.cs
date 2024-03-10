@@ -13,7 +13,8 @@
         {
             var path = context.Request.Path;
 
-            if (path.StartsWithSegments("/subjects") || path.StartsWithSegments("/user") || path.StartsWithSegments("/classrooms"))
+            if (path.StartsWithSegments("/subjects") || path.StartsWithSegments("/users") || path.StartsWithSegments("/classrooms")
+                || path.StartsWithSegments("/componentscores"))
             {
                 var token = context.Request.Cookies["Token"];
 

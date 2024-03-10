@@ -54,7 +54,7 @@ namespace ScoreManagementApi.Controllers
 
         [HttpPost]
         [Route("create-user")]
-        //[Authorize(Roles = StaticUserRoles.ADMIN)]
+        [Authorize(Roles = StaticUserRoles.ADMIN)]
         public async Task<ResponseData<UserResponse>> CreateUser([FromBody] CreateUserRequest request)
         {
             return await _userService.CreateUser(request);
@@ -62,7 +62,7 @@ namespace ScoreManagementApi.Controllers
 
         [HttpPut]
         [Route("update-user")]
-        //[Authorize(Roles = StaticUserRoles.ADMIN)]
+        [Authorize(Roles = StaticUserRoles.ADMIN)]
         public async Task<ResponseData<UserResponse>> UpdateUser([FromBody] UpdateUserRequest request)
         {
             return await _userService.UpdateUser(request);
@@ -72,8 +72,6 @@ namespace ScoreManagementApi.Controllers
         [Route("login")]
         public async Task<ResponseData<LoginResponse>> Login([FromBody] LoginRequest request)
         {
-            //request.UserNameOrEmail = "admin";
-            //request.Password = "123456";
             return await _userService.Login(request);
         }
 

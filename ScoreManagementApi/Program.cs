@@ -115,6 +115,8 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ISubjectService, SubjectService>();
 builder.Services.AddScoped<IClassService , ClassService>();
 builder.Services.AddScoped<EmailServices>();
+builder.Services.AddScoped<IComponentScoreService, ComponentScoreService>();
+builder.Services.AddScoped<IScoreService, ScoreService>();
 
 var app = builder.Build();
 

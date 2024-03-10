@@ -45,6 +45,14 @@
       "PackagePath": "staticwebassets\\assets\\js\\common.js"
     },
     {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\component-score\\create-component.js",
+      "PackagePath": "staticwebassets\\assets\\js\\component-score\\create-component.js"
+    },
+    {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\component-score\\index.js",
+      "PackagePath": "staticwebassets\\assets\\js\\component-score\\index.js"
+    },
+    {
       "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\main.js",
       "PackagePath": "staticwebassets\\assets\\js\\main.js"
     },
@@ -59,6 +67,18 @@
     {
       "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\subject\\update-subject.js",
       "PackagePath": "staticwebassets\\assets\\js\\subject\\update-subject.js"
+    },
+    {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\user\\create-user.js",
+      "PackagePath": "staticwebassets\\assets\\js\\user\\create-user.js"
+    },
+    {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\user\\index.js",
+      "PackagePath": "staticwebassets\\assets\\js\\user\\index.js"
+    },
+    {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\user\\update-user.js",
+      "PackagePath": "staticwebassets\\assets\\js\\user\\update-user.js"
     },
     {
       "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\lib\\chart\\chart.min.js",
