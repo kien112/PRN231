@@ -229,10 +229,11 @@ namespace ScoreManagementApi.Services
                 .Include(x => x.ClassStudents)
                 .Include(x => x.Teacher)
                 .Include(x => x.Subject)
+                .Include(x => x.Creator)
                 .Where(x => 
                     (request.Name == null || x.Name.ToLower().Contains(request.Name))
                     && (request.Active == null || x.Active == request.Active)
-                    && (request.IsCurrentClass == false || (x.TeacherId != null && x.TeacherId.Equals(user.Id)))
+                    && (request.IsCurrentClass == false || (x.TeacherId != null && x.TeacherId.Equals(user.Id)) || (x.ClassStudents.Where(cs => cs.StudentId.Equals(user.Id)).Count() > 0))
                     && (request.TeacherId == null || (x.TeacherId != null && x.TeacherId.Equals(request.TeacherId)))
                     && (request.TeacherName == null || (x.Teacher != null && x.Teacher.FullName.ToLower().Contains(request.TeacherName)))
                     && (request.SubjectId == null || (x.Subject != null && x.Subject.Id == request.SubjectId))

@@ -6,9 +6,11 @@ using ScoreManagementApi.Core.Dtos.Common;
 using ScoreManagementApi.Core.Dtos.ComponentScoreDto;
 using ScoreManagementApi.Core.Dtos.ScoreDto.Request;
 using ScoreManagementApi.Core.Dtos.ScoreDto.Response;
+using ScoreManagementApi.Core.Dtos.SubjectDto;
 using ScoreManagementApi.Core.Dtos.User;
 using ScoreManagementApi.Core.Entities;
 using ScoreManagementApi.Core.OtherObjects;
+using System.Linq;
 
 namespace ScoreManagementApi.Services
 {
@@ -332,11 +334,11 @@ namespace ScoreManagementApi.Services
             };
         }
 
-        public async Task<ResponseData<SearchList<ScoreResponse>>> SearchScore(UserTiny? user, SearchScoreRequest request)
+        public async Task<ResponseData<ScoreResponse>> SearchScore(UserTiny? user, SearchScoreRequest request)
         {
             if(user == null)
             {
-                return new ResponseData<SearchList<ScoreResponse>>
+                return new ResponseData<ScoreResponse>
                 {
                     Message = "UnAuth",
                     StatusCode = 401
@@ -348,7 +350,7 @@ namespace ScoreManagementApi.Services
             var isExistClass = await _context.ClassRooms.FindAsync(request.ClassId);
             if(isExistClass == null)
             {
-                return new ResponseData<SearchList<ScoreResponse>>
+                return new ResponseData<ScoreResponse>
                 {
                     Message = "Class Not Found!",
                     StatusCode = 404
@@ -356,7 +358,7 @@ namespace ScoreManagementApi.Services
             }
             else if (isExistClass.Active == false)
             {
-                return new ResponseData<SearchList<ScoreResponse>>
+                return new ResponseData<ScoreResponse>
                 {
                     Message = "Class Is InActive!",
                     StatusCode = 400
@@ -365,7 +367,7 @@ namespace ScoreManagementApi.Services
             else if ((isExistClass.TeacherId == null || !isExistClass.TeacherId.Equals(user.Id))
                 && user.Role.Equals(StaticUserRoles.TEACHER))
             {
-                return new ResponseData<SearchList<ScoreResponse>>
+                return new ResponseData<ScoreResponse>
                 {
                     Message = "You are not allow to access to score of this class!",
                     StatusCode = 403
@@ -375,7 +377,7 @@ namespace ScoreManagementApi.Services
             var isExistSubject = await _context.Subjects.FindAsync(isExistClass.SubjectId);
             if(isExistSubject == null)
             {
-                return new ResponseData<SearchList<ScoreResponse>>
+                return new ResponseData<ScoreResponse>
                 {
                     Message = "Subject Not Found!",
                     StatusCode = 404
@@ -383,7 +385,7 @@ namespace ScoreManagementApi.Services
             }
             else if(isExistSubject.Active == false)
             {
-                return new ResponseData<SearchList<ScoreResponse>>
+                return new ResponseData<ScoreResponse>
                 {
                     Message = "Subject Is InActive!",
                     StatusCode = 400
@@ -394,7 +396,8 @@ namespace ScoreManagementApi.Services
                 .Include(x => x.Student)
                 .Where(x => 
                     x.ClassRoomId == request.ClassId
-                    && (request.StudentName == null || x.Student.FullName.ToLower().Contains(request.StudentName))
+                    && (String.IsNullOrEmpty(request.StudentName) 
+                        || x.Student.FullName.ToLower().Contains(request.StudentName))
                 )
                 .Select(x => new UserTiny
                 {
@@ -411,52 +414,98 @@ namespace ScoreManagementApi.Services
                 .Select(x => new ComponentScoreTiny 
                 { 
                     Id = x.Id,
-                    Name = x.Name
+                    Name = x.Name,
+                    Percent = x.Percent
                 })
                 .ToListAsync();
 
-            List<ScoreResponse> scores = new List<ScoreResponse>();
-            
+            ScoreResponse scores = new ScoreResponse();
+            scores.ComponentScore = componentScores;
+            scores.StudentScores = new List<StudentScore>();
+
             foreach (var student in studentIdsInClass)
             {
+                StudentScore studentScore = new StudentScore();
+                studentScore.Student = student;
+                List<ComponentScoreIdAndMark> marks = new List<ComponentScoreIdAndMark>();
+
                 foreach (var cs in componentScores)
                 {
-                    var existScore = _context.Scores
-                        .SingleOrDefault(x => 
+                    var existScore = await _context.Scores
+                        .SingleOrDefaultAsync(x => 
                             x.StudentId.Equals(student.Id) 
                             && x.ComponentScoreId == cs.Id);
 
-                    if(existScore != null)
-                    {
-                        scores.Add(new ScoreResponse
+                    marks.Add(new ComponentScoreIdAndMark
                         {
-                            Id = existScore.Id,
-                            Mark = existScore.Mark,
-                            Student = student,
-                            ComponentScore = cs
+                            Id = cs.Id,
+                            Mark = existScore != null ? existScore.Mark : null,
+                            Percent = cs.Percent
                         });
-                    }
-                    else
+                }
+                studentScore.ComponentScoreIdAndMarks = marks;
+                scores.StudentScores.Add(studentScore);
+            }
+
+            //paging and sort
+            if (!String.IsNullOrEmpty(request.SortBy))
+            {
+                if (request.SortBy.Equals("FullName"))
+                {
+                    scores.StudentScores = request.OrderBy.Equals(StaticString.ASC)
+                        ? scores.StudentScores.OrderBy(x => x.Student.FullName).ToList() 
+                        : scores.StudentScores.OrderByDescending(x => x.Student.FullName).ToList();
+                }
+                else
+                {
+                    int count = ValidateSortBy(request.SortBy, componentScores);
+                    if(count >= 0)
                     {
-                        scores.Add(new ScoreResponse
-                        {
-                            Student = student,
-                            ComponentScore = cs
-                        });
+                        scores.StudentScores = request.OrderBy.Equals(StaticString.ASC)
+                        ? scores.StudentScores.OrderBy(x => x.ComponentScoreIdAndMarks[count].Mark).ToList()
+                        : scores.StudentScores.OrderByDescending(x => x.ComponentScoreIdAndMarks[count].Mark).ToList();
                     }
                 }
             }
 
+            scores.SortBy = request.SortBy;
+            scores.OrderBy = request.OrderBy;
+            scores.TotalElements = scores.StudentScores.Count;
+            scores.PageSize = request.PageSize;
+            scores.PageIndex = request.PageIndex;
+            scores.Subject = new SubjectTiny
+            {
+                Id = isExistSubject.Id,
+                Name = isExistSubject.Name,
+            };
 
-            return new ResponseData<SearchList<ScoreResponse>>
+            scores.StudentScores = scores.StudentScores
+                .Skip((int)(request.PageIndex * request.PageSize))
+                .Take((int)request.PageSize)
+                .ToList();
+
+            return new ResponseData<ScoreResponse>
             {
                 Message = "Ok",
                 StatusCode = 200,
-                Data = new SearchList<ScoreResponse>
-                {
-                    Result = scores
-                }
+                Data = scores
             };
+        }
+
+        private int ValidateSortBy(string sortBy, List<ComponentScoreTiny> componentScores)
+        {
+            if (componentScores == null || componentScores.Count == 0)
+                return -1;
+
+            int count = 0;
+            foreach (var cs in componentScores)
+            {
+                if(sortBy.Equals(cs.Name))
+                    return count;
+                count++;
+            }
+            
+            return count;
         }
 
         private byte[] CreateExcelFile(List<ComponentScore> components, List<string> students)
@@ -492,12 +541,12 @@ namespace ScoreManagementApi.Services
                             );
                         if (score != null)
                         {
-                            worksheet.Cells[i + 2, col].Value = score.Mark == null ? DBNull.Value : score.Mark;
+                            worksheet.Cells[i + 2, col].Value = score.Mark == null ? DBNull.Value : Math.Round((float)score.Mark, 2);
                             total += score.Mark * components[j].Percent / 100;
                         }
                         col++;
                     }
-                    worksheet.Cells[i + 2, col++].Value = total == null ? DBNull.Value : total;
+                    worksheet.Cells[i + 2, col++].Value = total == null ? DBNull.Value : Math.Round((float)total, 2);
                 }
 
                 using (var memoryStream = new MemoryStream())
@@ -521,6 +570,90 @@ namespace ScoreManagementApi.Services
             }
 
             return columnName;
+        }
+
+        public async Task<ResponseData<List<StudentScoreResponse>>> SearchStudentScore(UserTiny? user, int subjectId)
+        {
+            if(user == null)
+            {
+                return new ResponseData<List<StudentScoreResponse>>
+                {
+                    Message = "UnAuth",
+                    StatusCode = 401
+                };
+            }
+
+            var existSubject = await _context.Subjects
+                .Include(x => x.ComponentScores)
+                .Include(x => x.ClassRooms)
+                .SingleOrDefaultAsync(x => x.Id == subjectId);
+            if(existSubject == null)
+            {
+                return new ResponseData<List<StudentScoreResponse>>
+                {
+                    StatusCode = 404,
+                    Message = "Subject Not Found!"
+                };
+            }
+            else if(existSubject.Active == false)
+            {
+                return new ResponseData<List<StudentScoreResponse>>
+                {
+                    StatusCode = 400,
+                    Message = "Subject is InActive!"
+                };
+            }
+            else if(existSubject.ClassRooms == null || existSubject.ClassRooms.Count == 0)
+            {
+                return new ResponseData<List<StudentScoreResponse>>
+                {
+                    StatusCode = 400,
+                    Message = "Subject don't have classrooms!"
+                };
+            }
+            else if (existSubject.ComponentScores == null || existSubject.ComponentScores.Count == 0)
+            {
+                return new ResponseData<List<StudentScoreResponse>>
+                {
+                    StatusCode = 400,
+                    Message = "Subject don't have component scores!"
+                };
+            }
+
+            var classIds = existSubject.ClassRooms.Select(x => x.Id).ToList();
+
+            var classStudents = _context.ClassStudents
+                .Where(x => classIds.Contains(x.ClassRoomId) && x.StudentId.Equals(user.Id)).ToList();
+
+            List<StudentScoreResponse> responses = new List<StudentScoreResponse>();
+
+            foreach (var item in classStudents)
+            {
+                foreach (var cs in existSubject.ComponentScores)
+                {
+                    var score = await _context.Scores
+                        .SingleOrDefaultAsync(x => x.StudentId.Equals(item.StudentId) 
+                            && x.ComponentScoreId == cs.Id);
+
+                    responses.Add(new StudentScoreResponse
+                    {
+                        ComponentScore = new ComponentScoreTiny
+                        {
+                            Id = cs.Id,
+                            Name = cs.Name,
+                            Percent = cs.Percent,
+                        },
+                        Mark = score?.Mark
+                    });
+                }
+            }
+
+            return new ResponseData<List<StudentScoreResponse>>
+            {
+                Data = responses,
+                StatusCode = 200,
+                Message = "ok"
+            };
         }
     }
 }

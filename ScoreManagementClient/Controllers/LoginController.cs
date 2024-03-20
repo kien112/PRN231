@@ -71,5 +71,11 @@ namespace ScoreManagementClient.Controllers
             HttpContext.Response.Cookies.Delete("UserInfo");
             return Redirect("/home");
         }
+
+        [HttpGet("ForgotPassword")]
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
     }
 }

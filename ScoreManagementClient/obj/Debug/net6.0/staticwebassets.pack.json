@@ -53,8 +53,24 @@
       "PackagePath": "staticwebassets\\assets\\js\\component-score\\index.js"
     },
     {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\component-score\\update-component.js",
+      "PackagePath": "staticwebassets\\assets\\js\\component-score\\update-component.js"
+    },
+    {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\forgot-password.js",
+      "PackagePath": "staticwebassets\\assets\\js\\forgot-password.js"
+    },
+    {
       "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\main.js",
       "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\score\\index.js",
+      "PackagePath": "staticwebassets\\assets\\js\\score\\index.js"
+    },
+    {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\score\\myscore.js",
+      "PackagePath": "staticwebassets\\assets\\js\\score\\myscore.js"
     },
     {
       "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\subject\\create-subject.js",

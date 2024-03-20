@@ -61,7 +61,7 @@ namespace ScoreManagementClient.Controllers
             {
                 return View();
             }
-            return Redirect("/home");
+            return Redirect("/PermissionDenied");
         }
 
         public async Task<IActionResult> Update(int id)
@@ -78,13 +78,9 @@ namespace ScoreManagementClient.Controllers
                 {
                     return View(response);
                 }
-                else
-                {
-                    return View();
-                }
             }
 
-            return View();
+            return Redirect("/NotFound");
         }
 
     }

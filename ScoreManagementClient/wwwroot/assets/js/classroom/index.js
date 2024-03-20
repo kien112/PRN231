@@ -118,6 +118,9 @@ function SearchClassroom() {
 function displayData(data) {
     $('#data').empty();
 
+    var role = getCookie('UserInfo');
+    role = JSON.parse(role).Role;
+
     data.forEach(function (item) {
         var row = '<tr>';
         row += '<th  scope="row">' + item.id + '</th>';
@@ -127,8 +130,10 @@ function displayData(data) {
         row += '<td>' + item.createdAt + '</td>';
         row += '<td>' + item.creator.fullName + '</td>';
         row += '<td>' + item.subject.name + '</td>';
-        row += '<td><a href="/classrooms/update/' + item.id + '" class="btn btn-warning m-2">Edit</a>';
-        row += '<a href="/classrooms/students/' + item.id + '" class="btn btn-warning m-2">List Students</a></td>';
+        if (role == 'ADMIN') {
+            row += '<td><a href="/classrooms/update/' + item.id + '" class="btn btn-warning m-2">Edit</a>';
+            row += '<a href="/classrooms/students/' + item.id + '" class="btn btn-warning m-2">List Students</a></td>';
+        }
         row += '</tr>';
         $('#data').append(row);
     });

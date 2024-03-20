@@ -1,7 +1,25 @@
 ﻿@using ScoreManagementClient.Dtos.Common;
 @using ScoreManagementClient.Dtos.ClassRoomDto;
 @model ResponseData<SearchClassRoom>
+@using Newtonsoft.Json;
+@using ScoreManagementClient.Dtos.User;
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor HttpContextAccessor
 
+@{
+    UserTiny? user = null;
+    foreach (var cookie in HttpContextAccessor.HttpContext.Request.Cookies)
+    {
+        if (cookie.Key.Equals("UserInfo"))
+        {
+            user = JsonConvert.DeserializeObject<UserTiny>(cookie.Value);
+            break;
+        }           
+    }
+     if (user == null)
+    {
+        user = new UserTiny();
+    }
+}
 @{
     int numberOfPage = 1;
     if (ViewBag.NumberOfPage != null)
@@ -13,7 +31,11 @@
         <h6 class="mb-4">Classrooms</h6>
         <div class="row">
             <div class="col-md-3">
-                <a href="/classrooms/create" class="btn btn-primary m-2">Create</a>
+                @if(user != null && user.Role.Equals("ADMIN"))
+                {
+                    <a href="/classrooms/create" class="btn btn-primary m-2">Create</a>
+                }
+                
             </div>
             <div class="col-md-6">
                 <div class="form-floating mb-3">
@@ -76,7 +98,11 @@
                         <th id="CreatedAt" scope="col">Created At <span class="up-down-arrow">&#8593; &#8595;</span></th>
                         <th scope="col">Creator</th>
                         <th scope="col">Subject</th>
-                        <th scope="col">Action</th>
+                        @if(user != null && user.Role.Equals("ADMIN"))
+                        {
+                            <th scope="col">Action</th>
+                        }
+                        
                     </tr>
                 </thead>
                 <tbody id="data">
@@ -90,10 +116,14 @@
                             <td>@item.CreatedAt</td>
                             <td>@item.Creator?.FullName</td>
                             <td>@item.Subject?.Name</td>
-                            <td>
-                                <a asp-action="update" asp-route-id="@item.Id" class="btn btn-warning m-2">Edit</a>
-                                <a asp-action="students" asp-route-id="@item.Id" class="btn btn-warning m-2">List Students</a>
-                            </td>
+                            @if(user != null && user.Role.Equals("ADMIN"))
+                            {
+                                <td>
+                                    <a asp-action="update" asp-route-id="@item.Id" class="btn btn-warning m-2">Edit</a>
+                                    <a asp-action="students" asp-route-id="@item.Id" class="btn btn-warning m-2">List Students</a>
+                                </td>
+                            }
+                            
                         </tr>
                     }
                     

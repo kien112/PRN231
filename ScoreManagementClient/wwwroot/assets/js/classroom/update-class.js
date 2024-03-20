@@ -26,12 +26,18 @@ function GetClassById() {
                 console.log('Data from API:', data);
                 if (data.statusCode === 200)
                     LoadDetail(data.data);
-                else
+                else {
                     Swal.fire({
                         icon: "error",
                         title: "Oops...",
                         text: data.message,
+                    }).then((result) => {
+                        if (result.isConfirmed || result.isDismissed) {
+                            window.location.href = '/classrooms';
+                        }
                     });
+                }
+                    
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.error('Error:', errorThrown);

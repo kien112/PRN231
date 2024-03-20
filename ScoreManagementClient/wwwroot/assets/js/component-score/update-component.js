@@ -32,6 +32,16 @@ function GetComponentDetail() {
                     $("#Description").val(data.data.description);
                     $("#SubjectId").val(data.data.subject.id);
                     $("#Active").val(data.data.active ? "1" : "0");
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: data.message,
+                    }).then((result) => {
+                        if (result.isConfirmed || result.isDismissed) {
+                            window.location.href = '/componentscores';
+                        }
+                    });
                 }
 
             },

@@ -42,12 +42,12 @@ namespace ScoreManagementClient.Controllers
                 }
                 else
                 {
-                    return Redirect("/home");
+                    return Redirect("/BadRequest");
                 }
             }
             else
             {
-                return Redirect("/home");
+                return Redirect("/BadRequest");
             }
 
         }

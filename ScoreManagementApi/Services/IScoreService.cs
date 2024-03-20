@@ -10,6 +10,7 @@ namespace ScoreManagementApi.Services
         Task<ResponseData<ScoreResponse>> CUDScore(UserTiny? user, List<CUDScoreRequest> request);
         Task<ResponseData<ExportScoreResponse>> ExportScore(UserTiny? user, int? classId);
         Task<ResponseData<ScoreResponse>> ImportScore(UserTiny? userTiny, ImportScoresRequest request);
-        Task<ResponseData<SearchList<ScoreResponse>>> SearchScore(UserTiny? user, SearchScoreRequest request);
+        Task<ResponseData<ScoreResponse>> SearchScore(UserTiny? user, SearchScoreRequest request);
+        Task<ResponseData<List<StudentScoreResponse>>> SearchStudentScore(UserTiny? user, int subjectId);
     }
 }

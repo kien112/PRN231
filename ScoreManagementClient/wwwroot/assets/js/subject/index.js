@@ -104,6 +104,8 @@ function SearchSubject() {
 
 function displayData(data) {
     $('#data').empty();
+    var role = getCookie('UserInfo');
+    role = JSON.parse(role).Role;
 
     data.forEach(function (item) {
         var row = '<tr>';
@@ -113,7 +115,8 @@ function displayData(data) {
         row += '<td>' + item.active + '</td>';
         row += '<td>' + item.createdAt + '</td>';
         row += '<td>' + item.creator.fullName + '</td>';
-        row += '<td><a href="/subjects/update/' + item.id + '" class="btn btn-warning m-2">Edit</a></td>';
+        if (role == 'ADMIN')
+            row += '<td><a href="/subjects/update/' + item.id + '" class="btn btn-warning m-2">Edit</a></td>';
         row += '</tr>'; 
         $('#data').append(row);
     });

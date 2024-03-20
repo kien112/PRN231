@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ScoreManagementApi.Core.Dtos.Common;
 using ScoreManagementApi.Core.Dtos.User;
 using ScoreManagementApi.Core.Dtos.User.Response;
+using ScoreManagementApi.Core.OtherObjects;
 using ScoreManagementApi.Services;
 
 namespace ScoreManagementApi.Controllers
@@ -19,6 +21,7 @@ namespace ScoreManagementApi.Controllers
         }
 
         [HttpGet("get-by-id/{Id}")]
+        [Authorize(Roles = StaticUserRoles.ADMIN)]
         public async Task<ResponseData<UserResponse>> GetUserById(string Id)
         {
             return await _userService.GetUserById(Id);
@@ -26,6 +29,7 @@ namespace ScoreManagementApi.Controllers
 
         [HttpPost]
         [Route("search-users")]
+        [Authorize(Roles = StaticUserRoles.ADMIN)]
         public async Task<ResponseData<SearchList<UserResponse>>> SearchUsers(SearchUsers request)
         {
             return await _userService.GetUsers(request);

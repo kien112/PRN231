@@ -163,17 +163,27 @@ namespace ScoreManagementApi.Services
             //get current subject of current user
             if (request.IsCurrentSubject == true)
             {
-                var classRoomIds = await _context.ClassStudents
+                if (user.Role.Equals(StaticUserRoles.STUDENT))
+                {
+                    var classRoomIds = await _context.ClassStudents
                     .Include(c => c.ClassRoom)
                     .Where(c => c.StudentId.Equals(user.Id) && c.ClassRoom.Active == true)
                     .Select(c => c.ClassRoomId)
                     .ToListAsync();
-                
-                if(classRoomIds != null && classRoomIds.Count > 0)
+
+                    if (classRoomIds != null && classRoomIds.Count > 0)
+                    {
+                        subjectIds = await _context.ClassRooms
+                            .Where(c => classRoomIds.Contains(c.Id))
+                            .Select(c => c.SubjectId)
+                            .ToListAsync();
+                    }
+                }
+                else if (user.Role.Equals(StaticUserRoles.TEACHER))
                 {
-                    subjectIds = await _context.ClassRooms
-                        .Where(c => classRoomIds.Contains(c.Id))
-                        .Select(c => c.SubjectId)
+                    subjectIds = await _context.ClassRooms.Where(x => x.TeacherId != null && x.TeacherId.Equals(user.Id))
+                        .Select(x => x.SubjectId)
+                        .Distinct()
                         .ToListAsync();
                 }
             }

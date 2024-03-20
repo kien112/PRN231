@@ -1,0 +1,32 @@
+﻿
+<div class="row mt-3">
+    <div class="col-md-4">
+        <h3 class="ms-3">My Score</h3>
+        <div class="form-floating mb-3">
+            <select class="form-select" id="SubjectId"
+                aria-label="Select Item">
+                <option value="-1">All</option>
+                <option value="1">Active</option>
+                <option value="0">InActive</option>
+            </select>
+            <label for="SubjectId">Select Subject</label>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr id="sortableTable">
+                        <th id="Id" scope="col">Component Score </th>
+                        <th id="Name" scope="col">Mark</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="/assets/js/score/myscore.js"></script>

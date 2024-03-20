@@ -3,9 +3,7 @@
 $(document).ready(function () {
 
     $('#btnCreate').click(function () {
-        $(this).prop('disabled', true);
         CreateUser();
-        $(this).prop('disabled', false);
     });
 
 });
@@ -28,6 +26,8 @@ function CreateUser() {
             Password: password,
             Gender: gender
         };
+        $(this).prop('disabled', true);
+        $('#mess').text('Please wait...');
 
         $.ajax({
             url: apiUrl + '/create-user',
@@ -44,6 +44,10 @@ function CreateUser() {
                     displayErrors(data.errors);
                 else if (data.statusCode == 200)
                     window.location.href = '/users';
+
+                $('#mess').text('');
+                $(this).prop('disabled', false);
+
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.error('Error:', errorThrown);

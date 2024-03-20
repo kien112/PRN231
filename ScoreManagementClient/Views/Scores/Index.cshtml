@@ -1,0 +1,127 @@
+﻿<div class="bg-secondary rounded h-100 p-4">
+        <h6 class="mb-4">Scores in Class: <span id="sp-class">No Info</span> and Subject: <span id="sp-subject">No Info</span></h6>
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6">
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="StudentName"
+                                placeholder="enter component name">
+                            <label for="StudentName">Student Name</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                         <div class="form-floating">
+                            <select class="form-select" id="ClassId"
+                                aria-label="Select Item">
+                                <option value="-1">All</option>
+                                <option value="1">Active</option>
+                                <option value="0">InActive</option>
+                            </select>
+                            <label for="ClassId">Select Class</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <select class="form-select" id="ComponentScoreId"
+                                aria-label="Select Item">
+                                <option value="-1">All</option>
+                                <option value="1">Active</option>
+                                <option value="0">InActive</option>
+                            </select>
+                            <label for="ComponentScoreId">Select Component Score</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+@*            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">Excel File</label>
+                    <input class="form-control bg-dark" type="file" id="formFile">
+                </div>
+            </div>*@
+            
+        </div>
+        
+        <div class="table-responsive">
+            <div>
+                <button class="btn btn-primary" id="btnSave">Save Changes</button>
+                <button class="btn btn-primary ms-3" id="btnImport">Import from Excel</button>
+                <button class="btn btn-primary ms-3" id="btnExport">Export to Excel</button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr id="sortableTable">
+                       
+                    </tr>
+                </thead>
+                <tbody id="data">
+                    
+                </tbody>
+            </table>
+            <div class="row w-75">
+                <div class="col-md-3">
+                    <div class="form-floating mb-3">
+                        <select class="form-select" id="PageSize"
+                            aria-label="Select Item">
+                            <option value="9999">All</option>
+                            <option value="2">2</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                        </select>
+                        <label for="floatingSelect">Page Size</label>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4">
+                   <div class="form-floating mb-3">
+                        <select class="form-select" id="PageIndex"
+                            aria-label="Select Item">
+                            <option value="1">1</option>
+                        </select>
+                        <label for="floatingSelect">Page Index</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="importModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content"  style="background-color: #191C24">
+      <div class="modal-header">
+        <h5 class="modal-title text-black" id="exampleModalLabel">Import Score</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Excel File</label>
+            <input class="form-control bg-dark" type="file" id="formFile">
+        </div>
+         <div class="form-floating">
+            <select class="form-select" id="ClassId2"
+                aria-label="Select Item">
+                <option value="-1">All</option>
+                <option value="1">Active</option>
+                <option value="0">InActive</option>
+            </select>
+            <label for="ClassId2">Select Class</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" id="btnSubmitImport" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/assets/js/score/index.js"></script>

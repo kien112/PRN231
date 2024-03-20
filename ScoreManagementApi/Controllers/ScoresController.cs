@@ -35,11 +35,21 @@ namespace ScoreManagementApi.Controllers
         [HttpPost]
         [Route("search-scores")]
         [Authorize(Roles = $"{StaticUserRoles.ADMIN}, {StaticUserRoles.TEACHER}")]
-        public async Task<ResponseData<SearchList<ScoreResponse>>> SearchScore([FromHeader] string Authorization,
+        public async Task<ResponseData<ScoreResponse>> SearchScore([FromHeader] string Authorization,
             [FromBody] SearchScoreRequest request)
         {
             return await _scoreService.SearchScore(JWTUtil
                 .GetUserFromToken(_configuration, _context, Authorization), request);
+        }
+
+        [HttpGet]
+        [Route("search-student-score/{subjectId}")]
+        [Authorize(Roles = $"{StaticUserRoles.STUDENT}")]
+        public async Task<ResponseData<List<StudentScoreResponse>>> SearchStudentScore([FromHeader] string Authorization,
+             int subjectId)
+        {
+            return await _scoreService.SearchStudentScore(JWTUtil
+                .GetUserFromToken(_configuration, _context, Authorization), subjectId);
         }
 
         [HttpPost]
@@ -65,7 +75,7 @@ namespace ScoreManagementApi.Controllers
         [HttpGet]
         [Route("export-score/{ClassId}")]
         [Authorize(Roles = $"{StaticUserRoles.ADMIN}, {StaticUserRoles.TEACHER}")]
-        public async Task<IActionResult> ExportScore([FromHeader] string Authorization, int? ClassId)
+        public async Task<IActionResult> ExportScore([FromHeader] string Authorization, int? ClassId, bool isSwagger)
         {
             var responseData = await _scoreService.ExportScore(JWTUtil
             .GetUserFromToken(_configuration, _context, Authorization), ClassId);
@@ -76,9 +86,9 @@ namespace ScoreManagementApi.Controllers
 
                 Response.Headers.Add("FileName", responseData.Data.FileName);
 
-                return File(excelBytes,
+                return isSwagger ? File(excelBytes,
                         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                        responseData.Data.FileName);
+                        responseData.Data.FileName) : Ok(excelBytes);
             }
             else
             {

@@ -5,9 +5,7 @@ $(document).ready(function () {
     GetUserDetail();
 
     $('#btnUpdate').click(function () {
-        $(this).prop('disabled', true);
         UpdateUser();
-        $(this).prop('disabled', false);
     });
 
 });
@@ -33,6 +31,16 @@ function GetUserDetail() {
                     $("#Username").val(data.data.userName);
                     $("#Gender").val(data.data.gender ? "Male" : "Female");
                     $("#Active").val(data.data.active ? "1" : "0");
+                } else {
+                    Swal.fire({
+                        icon: "error",
+                        title: "Oops...",
+                        text: data.message,
+                    }).then((result) => {
+                        if (result.isConfirmed || result.isDismissed) {
+                            window.location.href = '/users';
+                        }
+                    });
                 }
                 
             },
@@ -67,6 +75,8 @@ function UpdateUser() {
             Gender: gender,
             Active: active
         };
+        $(this).prop('disabled', true);
+        $('#mess').text('Please wait...');
 
         $.ajax({
             url: apiUrl + '/update-user',
@@ -83,6 +93,9 @@ function UpdateUser() {
                     displayErrors(data.errors);
                 else if (data.statusCode == 200)
                     window.location.href = '/users';
+
+                $(this).prop('disabled', false);
+                $('#mess').text('');
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.error('Error:', errorThrown);
