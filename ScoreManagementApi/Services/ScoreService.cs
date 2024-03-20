@@ -513,6 +513,8 @@ namespace ScoreManagementApi.Services
             using (var package = new ExcelPackage())
             {
                 var worksheet = package.Workbook.Worksheets.Add("Scores");
+                worksheet.Protection.IsProtected = true;
+                worksheet.Protection.AllowSelectLockedCells = true;
 
                 worksheet.Cells["A1"].Value = "ID";
                 worksheet.Cells["B1"].Value = "Name";
@@ -544,6 +546,7 @@ namespace ScoreManagementApi.Services
                             worksheet.Cells[i + 2, col].Value = score.Mark == null ? DBNull.Value : Math.Round((float)score.Mark, 2);
                             total += score.Mark * components[j].Percent / 100;
                         }
+                        worksheet.Cells[i + 2, col].Style.Locked = false;
                         col++;
                     }
                     worksheet.Cells[i + 2, col++].Value = total == null ? DBNull.Value : Math.Round((float)total, 2);

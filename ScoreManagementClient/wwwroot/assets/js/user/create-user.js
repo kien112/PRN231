@@ -45,7 +45,10 @@ function CreateUser() {
                 else if (data.statusCode == 200)
                     window.location.href = '/users';
 
-                $('#mess').text('');
+                if (data.message)
+                    $('#mess').text(data.message);
+                else
+                    $('#mess').text('');
                 $(this).prop('disabled', false);
 
             },

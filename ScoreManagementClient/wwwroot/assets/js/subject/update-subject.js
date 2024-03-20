@@ -40,6 +40,8 @@ function UpdateSubject() {
                     displayErrors(data.errors);
                 else if (data.statusCode == 200)
                     window.location.href = '/subjects';
+                else if (data.message)
+                    $('#mess').text(data.message);
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.error('Error:', errorThrown);

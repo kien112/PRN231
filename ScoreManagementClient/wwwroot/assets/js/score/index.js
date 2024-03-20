@@ -3,7 +3,7 @@ var componentScoreId = null, active = null, pageIndex = null, studentName = null
     pageSize = 9999, totalElement = 0, sortBy = null, orderBy = 'ASC', classId = null,
     isClassChange = false;
 var up = '&#8593;', down = '&#8595;';
-var scoreRequest = [], classes = [];
+var scoreRequest = [];
 
 
 
@@ -18,6 +18,12 @@ $(document).ready(function () {
 
     $('#ClassId').on('change', function () {
         classId = $(this).val();
+        if (classId == -1) {
+            $('#sortableTable').empty();
+            $('#data').empty();
+            $('#ComponentScoreId').empty();
+            return false;
+        }
         componentScoreId = null;
         isClassChange = true;
         SearchScores();
@@ -82,7 +88,7 @@ function exportScore() {
                 downloadExcelFile(response, fileName);
             },
             error: function (xhr, status, error) {
-                Swal.fire('Error!!!');
+                Swal.fire('Please Select a Class!!!');
                 console.error(xhr.responseText);
             }
         });
@@ -233,8 +239,12 @@ function LoadClasses() {
                 console.log('Data from API:', data);
                 if (data.statusCode === 200) {
                     var select = $('#ClassId');
+                    var emptyOpt = $('<option>');
+                    emptyOpt.val(-1);
+                    emptyOpt.text('No Selection');
+                    select.append(emptyOpt);
+
                     var select2 = $('#ClassId2');
-                    classes = data.data.result;
 
                     $.each(data.data.result, function (index, subject) {
                         var option = $('<option>');
@@ -419,7 +429,7 @@ function displayData(data) {
                 step: '0.1',
                 min: 0.0,
                 max: 10.0,
-                style: 'width: 50px',
+                style: 'width: 70px',
                 value: m.mark == null ? '' : m.mark,
                 'data-old-val': m.mark == null ? '' : m.mark
             }).on('input', function () {

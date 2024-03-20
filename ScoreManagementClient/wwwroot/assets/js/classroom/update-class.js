@@ -26,7 +26,7 @@ function GetClassById() {
                 console.log('Data from API:', data);
                 if (data.statusCode === 200)
                     LoadDetail(data.data);
-                else {
+                else if (data.statusCode == 404) {
                     Swal.fire({
                         icon: "error",
                         title: "Oops...",

@@ -94,8 +94,12 @@ function UpdateUser() {
                 else if (data.statusCode == 200)
                     window.location.href = '/users';
 
+                if (data.message)
+                    $('#mess').text(data.message);
+                else
+                    $('#mess').text('');
+
                 $(this).prop('disabled', false);
-                $('#mess').text('');
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 console.error('Error:', errorThrown);
