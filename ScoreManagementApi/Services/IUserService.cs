@@ -14,5 +14,6 @@ namespace ScoreManagementApi.Services
         Task<ResponseData<LoginResponse>> Login(LoginRequest request);
         Task<ResponseData<UpdateUserRole>> UpdateUserRole(UpdateUserRole request);
         Task<ResponseData<string>> ForgotPassword(ForgotPasswordRequest request);
+        Task<ResponseData<string>> ChangePassword(UserTiny? userTiny, ChangePasswordRequest request);
     }
 }

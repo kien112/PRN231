@@ -542,5 +542,69 @@ namespace ScoreManagementApi.Services
             }
             return stringBuilder.ToString();
         }
+
+        public async Task<ResponseData<string>> ChangePassword(UserTiny? user, ChangePasswordRequest request)
+        {
+            if(user == null)
+            {
+                return new ResponseData<string>
+                {
+                    StatusCode = 401,
+                    Message = "UnAuth"
+                };
+            }
+            var errors = request.ValidateInput();
+
+            if (errors != null && errors.Count > 0)
+            {
+                return new ResponseData<string>
+                {
+                    StatusCode = 400,
+                    Errors = errors
+                };
+            }
+
+            var existUser = await _userManager.FindByIdAsync(user.Id);
+            if (existUser == null)
+            {
+                return new ResponseData<string>
+                {
+                    Message = "User Not Found!",
+                    StatusCode = 404
+                };
+            }
+
+            var isPasswordCorrect = await _userManager.CheckPasswordAsync(existUser, request.OldPassword);
+            if (!isPasswordCorrect)
+                return new ResponseData<string>
+                {
+                    Message = "Old Password is InCorrect!",
+                    StatusCode = 400
+                };
+
+            existUser.PasswordHash = new PasswordHasher<User>().HashPassword(existUser, request.NewPassword);
+
+            var updateUserResult = await _userManager.UpdateAsync(existUser);
+
+            if (!updateUserResult.Succeeded)
+            {
+                var errorString = "User Update Failed Because: ";
+                foreach (var error in updateUserResult.Errors)
+                {
+                    errorString += " # " + error.Description;
+                }
+                return new ResponseData<string>
+                {
+                    Message = errorString,
+                    StatusCode = 400
+                };
+            }
+
+            return new ResponseData<string>
+            {
+                Message = "ok",
+                StatusCode = 200
+            };
+        }
     }
 }

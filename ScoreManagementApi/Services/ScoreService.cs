@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
 using ScoreManagementApi.Core.DbContext;
+using ScoreManagementApi.Core.Dtos.ClassRoomDto;
 using ScoreManagementApi.Core.Dtos.Common;
 using ScoreManagementApi.Core.Dtos.ComponentScoreDto;
 using ScoreManagementApi.Core.Dtos.ScoreDto.Request;
@@ -656,6 +657,114 @@ namespace ScoreManagementApi.Services
                 Data = responses,
                 StatusCode = 200,
                 Message = "ok"
+            };
+        }
+
+        public async Task<ResponseData<TopScoreResponse>> GetTopScore(UserTiny? user, int subjectId, int top)
+        {
+            if(user == null)
+            {
+                return new ResponseData<TopScoreResponse> { StatusCode = 401, Message = "UnAuth" };
+            }
+
+            if (top <= 0)
+                return new ResponseData<TopScoreResponse> { Message = "Top must be > 0", StatusCode = 400};
+
+            var existSubject = await _context.Subjects
+                .Include(x => x.ClassRooms)
+                .Include(x => x.ComponentScores)
+                .SingleOrDefaultAsync(x => x.Id == subjectId);
+
+            if (existSubject == null)
+                return new ResponseData<TopScoreResponse> { StatusCode = 404, Message = "Subject Not Found" };
+            else if(existSubject.Active == false)
+                return new ResponseData<TopScoreResponse> { Message = "This Subject is inactive!", StatusCode = 400 };
+            else if(existSubject.ClassRooms == null || existSubject.ClassRooms.Count == 0)
+                return new ResponseData<TopScoreResponse> { Message = "This Subject has no classrooms!", StatusCode = 400 };
+            else if (existSubject.ComponentScores == null || existSubject.ComponentScores.Count == 0)
+                return new ResponseData<TopScoreResponse> { Message = "This Subject has no component scores!", StatusCode = 400 };
+
+            var totalPercent = existSubject.ComponentScores.Select(x => x.Percent).Sum();
+            if(totalPercent < 100)
+                return new ResponseData<TopScoreResponse> { Message = "Total percent of component scores of this subject isn't enough 100%!", StatusCode = 400 };
+
+            var classIds = existSubject.ClassRooms
+                .Where(x => x.Active == true)
+                .Select(x => x.Id).ToList();
+            
+            var students = await _context.ClassStudents
+                .Include(x => x.Student)
+                .Include(x => x.ClassRoom)
+                .Where(x => classIds.Contains(x.ClassRoomId))
+                .Select(x => new UserTiny
+                {
+                    Id = x.StudentId,
+                    FullName = x.Student.FullName,
+                    ClassName = x.ClassRoom.Name
+                })
+                .ToListAsync();
+
+            TopScoreResponse response = new TopScoreResponse();
+            response.TopScores = new List<TopScore>();
+            bool isFullScore;
+
+            foreach (var student in students)
+            {
+                TopScore topScore = new TopScore();
+                topScore.Student = student;
+                topScore.ClassRoom = new ClassRoomTiny
+                {
+                    Name = student.ClassName
+                };
+                topScore.Subject = new SubjectTiny
+                {
+                    Id = existSubject.Id,
+                    Name = existSubject.Name
+                };
+                isFullScore = true;
+
+                foreach (var component in existSubject.ComponentScores)
+                {
+                    var score = await _context.Scores
+                        .SingleOrDefaultAsync(x => x.ComponentScoreId ==  component.Id
+                            && x.StudentId.Equals(student.Id));
+
+                    if(score == null || score.Mark == null)
+                    {
+                        isFullScore = false;
+                        break;
+                    }
+                    topScore.Score += (float)score.Mark * component.Percent / 100;
+                }
+                if (isFullScore)
+                {
+                    topScore.Score = (float)Math.Round(topScore.Score, 2);
+                    response.TopScores.Add(topScore);
+                }
+            }
+
+            int rank = 1;
+            response.TopScores = response.TopScores
+                .OrderByDescending(x => x.Score)
+                .Take(top)
+                .ToList();
+            foreach (var item in response.TopScores)
+            {
+                item.Rank = rank++;
+                if (item.Student.Id.Equals(user.Id))
+                {
+                    response.OwnerRank = new TopScore
+                    {
+                        Score = item.Score,
+                        Rank = item.Rank
+                    };
+                }
+            }
+
+            return new ResponseData<TopScoreResponse>
+            {
+                Data = response,
+                StatusCode = 200
             };
         }
     }

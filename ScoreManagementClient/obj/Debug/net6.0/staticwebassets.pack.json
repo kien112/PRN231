@@ -85,6 +85,14 @@
       "PackagePath": "staticwebassets\\assets\\js\\subject\\update-subject.js"
     },
     {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\top-score.js",
+      "PackagePath": "staticwebassets\\assets\\js\\top-score.js"
+    },
+    {
+      "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\user\\change-password.js",
+      "PackagePath": "staticwebassets\\assets\\js\\user\\change-password.js"
+    },
+    {
       "Id": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\user\\create-user.js",
       "PackagePath": "staticwebassets\\assets\\js\\user\\create-user.js"
     },

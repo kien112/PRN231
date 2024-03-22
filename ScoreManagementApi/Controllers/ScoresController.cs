@@ -52,6 +52,16 @@ namespace ScoreManagementApi.Controllers
                 .GetUserFromToken(_configuration, _context, Authorization), subjectId);
         }
 
+        [HttpGet]
+        [Route("get-top-score/{subjectId}/{top}")]
+        [Authorize]
+        public async Task<ResponseData<TopScoreResponse>> GetTopScore([FromHeader] string Authorization,
+             int subjectId, int top)
+        {
+            return await _scoreService.GetTopScore(JWTUtil
+                .GetUserFromToken(_configuration, _context, Authorization), subjectId, top);
+        }
+
         [HttpPost]
         [Route("cud-scores")]
         [Authorize(Roles = $"{StaticUserRoles.ADMIN}, {StaticUserRoles.TEACHER}")]

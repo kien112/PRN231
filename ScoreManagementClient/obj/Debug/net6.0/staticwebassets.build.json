@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jRS0oe3VoEKf7QJEGm/nWgLmIDxZrOXg+SuVILY3+b4=",
+  "Hash": "0ZTB7Ddum9hsYdaBt8GqUU8EKWD7FPx33dgWumcq1d0=",
   "Source": "ScoreManagementClient",
   "BasePath": "_content/ScoreManagementClient",
   "Mode": "Default",
@@ -389,6 +389,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\subject\\update-subject.js"
+    },
+    {
+      "Identity": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\top-score.js",
+      "SourceId": "ScoreManagementClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\",
+      "BasePath": "_content/ScoreManagementClient",
+      "RelativePath": "assets/js/top-score.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\top-score.js"
+    },
+    {
+      "Identity": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\user\\change-password.js",
+      "SourceId": "ScoreManagementClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\",
+      "BasePath": "_content/ScoreManagementClient",
+      "RelativePath": "assets/js/user/change-password.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\js\\user\\change-password.js"
     },
     {
       "Identity": "E:\\c#_web_api\\PRN231\\ScoreManagementClient\\wwwroot\\assets\\js\\user\\create-user.js",

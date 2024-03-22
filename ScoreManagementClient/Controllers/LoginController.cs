@@ -77,5 +77,11 @@ namespace ScoreManagementClient.Controllers
         {
             return View();
         }
+
+        [HttpGet("ChangePassword")]
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
     }
 }

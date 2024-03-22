@@ -18,7 +18,8 @@ namespace ScoreManagementClient.Extensions
             var path = context.Request.Path;
 
             if (path.StartsWithSegments("/subjects") || path.StartsWithSegments("/users") || path.StartsWithSegments("/classrooms")
-                || path.StartsWithSegments("/componentscores") || path.StartsWithSegments("/scores") || path.StartsWithSegments("/myscore"))
+                || path.StartsWithSegments("/componentscores") || path.StartsWithSegments("/scores") || path.StartsWithSegments("/myscore")
+                || path.StartsWithSegments("/changepassword"))
             {
                 var token = context.Request.Cookies["Token"];
                 var userInfo = context.Request.Cookies["UserInfo"];
@@ -31,6 +32,12 @@ namespace ScoreManagementClient.Extensions
                 if (string.IsNullOrEmpty(token) || user == null)
                 {
                     context.Response.Redirect("/login");
+                    return;
+                }
+
+                if(path.StartsWithSegments("/scores") && user.Role.Equals(StaticUserRoles.STUDENT))
+                {
+                    context.Response.Redirect("/PermissionDenied");
                     return;
                 }
 

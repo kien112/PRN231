@@ -10,6 +10,9 @@ using ScoreManagementApi.Core.Entities;
 using ScoreManagementApi.Core.OtherObjects;
 using System.Data;
 using ScoreManagementApi.Services;
+using Microsoft.EntityFrameworkCore;
+using ScoreManagementApi.Utils;
+using ScoreManagementApi.Core.DbContext;
 
 namespace ScoreManagementApi.Controllers
 {
@@ -21,14 +24,16 @@ namespace ScoreManagementApi.Controllers
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _configuration;
         private readonly IUserService _userService;
+        private readonly ApplicationDbContext _context;
 
-        public AuthController(UserManager<User> userManager,
+        public AuthController(UserManager<User> userManager, ApplicationDbContext context,
             RoleManager<IdentityRole> roleManager, IConfiguration configuration, IUserService userService)
         {
             _userManager = userManager;
             _roleManager = roleManager;
             _configuration = configuration;
             _userService = userService;
+            _context = context;
         }
 
         [HttpPost]
@@ -88,6 +93,16 @@ namespace ScoreManagementApi.Controllers
         public async Task<ResponseData<string>> ForgotPassword([FromBody] ForgotPasswordRequest request)
         {
             return await _userService.ForgotPassword(request);
+        }
+
+        [HttpPut]
+        [Route("change-password")]
+        [Authorize]
+        public async Task<ResponseData<string>> ChangePassword([FromHeader] string Authorization, 
+            [FromBody] ChangePasswordRequest request)
+        {
+            return await _userService.ChangePassword(JWTUtil
+                .GetUserFromToken(_configuration, _context, Authorization), request);
         }
     }
 }

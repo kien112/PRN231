@@ -398,6 +398,7 @@ function displayData(data) {
     $('.up-down-arrow').html(up + ' ' + down);
     $('.up-down-arrow').removeClass('text-danger');
     if (sortBy != null) {
+        console.log('ii');
         var selectedField = $('#' + sortBy).find('span');
         selectedField.html(orderBy === 'ASC' ? up : down);
         selectedField.addClass('text-danger');
@@ -506,7 +507,6 @@ function LoadPageIndex() {
 function registerSortEvent(id) {
 
     var columnName = id;
-    console.log(columnName);
 
     if (columnName !== undefined) {
         if (columnName !== sortBy) {
@@ -515,7 +515,6 @@ function registerSortEvent(id) {
         } else {
             orderBy = orderBy === 'ASC' ? 'DESC' : 'ASC';
         }
-        
         SearchScores();
     }
 }

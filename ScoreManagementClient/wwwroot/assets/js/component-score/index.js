@@ -179,7 +179,7 @@ function LoadPageIndex() {
 
     $('#PageIndex').empty();
 
-    console.log(totalElement, pageSize)
+    console.log(pageIndex, pageSize)
     var numberOfPage = totalElement % pageSize == 0
         ? totalElement / pageSize : 1 + totalElement / pageSize;
     numberOfPage = Math.floor(numberOfPage);

@@ -2,7 +2,6 @@
 
 $(document).ready(function () {
 
-    LoadSubjects();
     GetComponentDetail();
 
     $('#btnUpdate').click(function () {
@@ -30,7 +29,7 @@ function GetComponentDetail() {
                     $("#ComponentName").val(data.data.name);
                     $("#Percent").val(data.data.percent);
                     $("#Description").val(data.data.description);
-                    $("#SubjectId").val(data.data.subject.id);
+                    LoadSubjects(data.data.subject.id);
                     $("#Active").val(data.data.active ? "1" : "0");
                 } else {
                     Swal.fire({
@@ -54,7 +53,7 @@ function GetComponentDetail() {
     }
 }
 
-function LoadSubjects() {
+function LoadSubjects(sId) {
 
     var request =
     {
@@ -83,6 +82,10 @@ function LoadSubjects() {
                         var option = $('<option>');
                         option.val(s.id);
                         option.text(s.name);
+
+                        if (s.id == sId)
+                            option.attr('selected', true);
+
                         $('#SubjectId').append(option);
                     });
                 }

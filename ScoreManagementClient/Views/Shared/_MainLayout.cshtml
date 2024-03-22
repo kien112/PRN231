@@ -98,7 +98,7 @@
                             <a href="/users" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Users</a>
                         }
                         <a href="/subjects" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Subjects</a>
-                        <a href="/componentscores" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Component Scores</a>
+                        <a href="/componentscores" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Component Score</a>
                         <a href="/classrooms" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Classrooms</a>
                         @if (!user.Role.Equals("STUDENT"))
                         {
@@ -106,6 +106,7 @@
                         }else{
                             <a href="/myscore" class="nav-item nav-link"><i class="fa fa-laptop me-2"></i>My Score</a>
                         }
+                        <a href="/changepassword" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Change Password</a>
                         <a href="/logout" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Log out</a>
                     }else{
                         <a href="/login" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Sign In</a>
